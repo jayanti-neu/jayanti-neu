@@ -3,7 +3,7 @@
 name: Daily constellation
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '17 6 * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -15,21 +15,3514 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: mnichols08/constellation@v1
+      - uses: mnichols08/constellation@v3
         with:
           publish: 'true'
           config-json: |
             {
-              "theme": "auto",
-              "layout": "compact",
-              "maxRepos": 100,
-              "animate": true,
+              "designCode": "v6:m7ff-y2026-f2024-e1-1he9gbv-1pbzo80",
+              "seedMode": "custom",
+              "seed": "v6:visual-y2026-f2024-e1-1he9gbv-1pbzo80",
+              "visualTheme": "deep-space",
+              "theme": "midnight",
+              "colors": {},
+              "visualStyle": {
+                "light": {
+                  "background": "#080e20",
+                  "foreground": "#e6edff",
+                  "accent": "#9ab9ff",
+                  "line": "#596f98",
+                  "star": "#f6d99b"
+                },
+                "dark": {
+                  "background": "#080e20",
+                  "foreground": "#e6edff",
+                  "accent": "#9ab9ff",
+                  "line": "#596f98",
+                  "star": "#f6d99b"
+                },
+                "lineWidth": 0.8,
+                "lineOpacity": 0.45,
+                "secondaryOpacity": 0.12,
+                "bridgeOpacity": 0.4,
+                "glow": 2.5,
+                "dustOpacity": 0.8,
+                "labelSize": 11,
+                "labels": true
+              },
+              "arrangement": "temporal-stack",
+              "layout": "atlas",
+              "exportProfile": "custom",
+              "maxRepos": 24,
               "includeForks": true,
-              "bridges": true,
+              "includeArchived": true,
+              "minStars": 0,
+              "updatedWithin": 0,
+              "sortBy": "stars",
+              "repoQuery": "",
+              "nodeMode": "repositories",
+              "nodeSize": "stars",
+              "nodeColorMode": "language",
+              "nodeGlowMode": "uniform",
+              "nodeShape": "circle",
+              "connectionWeight": "languages",
+              "connectionBasis": "topics",
               "connectionDensity": "all",
-              "connectionBasis": "both",
+              "bridges": false,
+              "colorConnections": false,
+              "majorMetric": "stars",
+              "effect": "none",
+              "legend": true,
+              "identityRing": true,
+              "snapToRings": true,
+              "showOther": true,
+              "animate": true,
+              "starlightAnimate": true,
+              "activityAnimate": true,
+              "ringRotations": [
+                91,
+                119,
+                119,
+                329
+              ],
+              "ringAnimation": {
+                "enabled": true,
+                "linked": false,
+                "speeds": [
+                  0,
+                  0.25,
+                  0,
+                  0.25
+                ],
+                "directions": [
+                  "counterclockwise",
+                  "counterclockwise",
+                  "clockwise",
+                  "clockwise"
+                ],
+                "modes": [
+                  "sway",
+                  "sway",
+                  "sway",
+                  "sway"
+                ],
+                "easing": [
+                  "smooth",
+                  "linear",
+                  "smooth",
+                  "linear"
+                ],
+                "amplitudes": [
+                  15,
+                  15,
+                  15,
+                  15
+                ]
+              },
+              "floatingAnimation": {
+                "enabled": true,
+                "mode": "drift",
+                "amplitude": 3,
+                "duration": 60
+              },
+              "perspective": {
+                "enabled": true,
+                "animate": true,
+                "horizontal": 22,
+                "vertical": 48,
+                "zoom": 92,
+                "range": 5,
+                "duration": 48
+              },
+              "starfield": {
+                "mode": "classic",
+                "density": 53,
+                "brightness": 0.85,
+                "depth": 0.8,
+                "twinkle": true,
+                "seed": "v6:visual-y2026-f2024-e1-1he9gbv-1pbzo80-sky"
+              },
+              "activityEffect": "asteroids",
+              "activityWindow": "7d",
+              "activityDetail": "event-types",
+              "activityConnections": true,
+              "codingRhythm": false,
+              "codingRhythmStyle": "hidden",
+              "codingRhythmWindow": "14d",
+              "codingRhythmTimezone": "UTC",
+              "codingRhythmDays": "subtle",
+              "codingRhythmAnimate": true,
+              "codingRhythmPeakLabel": true,
+              "codingRhythmLabels": "quarters",
+              "codingRhythmCelestialMarkers": false,
+              "codingRhythmProjectHints": true,
+              "history": {
+                "mode": "current",
+                "year": null,
+                "maxHistoricalFrames": 8,
+                "timeLapse": {
+                  "enabled": false,
+                  "duration": 16,
+                  "mode": "grow",
+                  "loop": true
+                }
+              },
+              "contributionOrbit": {
+                "enabled": false,
+                "period": "52w",
+                "granularity": "week",
+                "style": "segments",
+                "showCurrent": true,
+                "animate": true
+              },
+              "languageEvolution": {
+                "enabled": false,
+                "style": "eras",
+                "buckets": "automatic"
+              },
+              "stellarAges": {
+                "enabled": false,
+                "mode": "appearance",
+                "showArchivedRemnants": true,
+                "thresholds": {
+                  "newborn": 90,
+                  "active": 30,
+                  "mature": 365,
+                  "quiet": 180,
+                  "dormant": 365
+                }
+              },
+              "foreignGalaxies": {
+                "enabled": false,
+                "limit": 8,
+                "minimumContribution": "pr",
+                "layout": "outer"
+              },
+              "nodeColors": {},
+              "starPositions": {},
+              "labelPositions": {},
+              "labelOffsets": {},
+              "hiddenNodes": [],
+              "hiddenLabels": [],
+              "selection": {
+                "start": null,
+                "end": null
+              },
+              "css": "/* Visual controls: light palette, then the viewer’s dark preference. */\nsvg {\n  --sky-background: #080e20;\n  --sky-foreground: #e6edff;\n  --sky-accent: #9ab9ff;\n  --sky-line: #596f98;\n  --sky-star: #f6d99b;\n}\n@media (prefers-color-scheme: dark) {\n  svg {\n    --sky-background: #080e20;\n    --sky-foreground: #e6edff;\n    --sky-accent: #9ab9ff;\n    --sky-line: #596f98;\n    --sky-star: #f6d99b;\n  }\n}\n.connections { stroke-width: 0.8; opacity: 0.45; }\n.shared-language[data-emphasis=\"secondary\"] { opacity: 0.12; }\n.bridges { stroke-width: 0.8; opacity: 0.4; }\n.star { filter: drop-shadow(0 0 2.5px var(--node-color,var(--sky-star))); }\n.dust { opacity: 0.8; }\n.language text, .repo-label { font-size: 11px; }\n.language, .repo-label { display: inline; }\n",
+              "customCSS": "",
+              "referenceDate": "2026-12-31T23:59:59.999Z",
+              "temporalStack": {
+                "enabled": true,
+                "innerArrangement": "rings",
+                "yearStart": 2024,
+                "yearEnd": 2026,
+                "yearStep": 1,
+                "tilt": 0.35,
+                "perspective": 0.27,
+                "connections": "same-node",
+                "depthGap": 120
+              },
+              "temporalGeometry": {
+                "shape": "sphere",
+                "radius": 350,
+                "depth": 700,
+                "startRadius": 350,
+                "endRadius": 170,
+                "waist": 0.4,
+                "twist": 0,
+                "surface": "wireframe",
+                "orientation": {
+                  "x": -8,
+                  "z": -5,
+                  "y": -15
+                }
+              },
+              "ringPlacements": {},
+              "includeRepos": [
+                "Code-the-Dream-School/react-curriculum-v4",
+                "Code-the-Dream-School/react-curriculum-v4-exercises",
+                "chingu-voyages/v47-tier1-team-04",
+                "chingu-voyages/v49-tier1-team-05",
+                "dashi-ki/react-curriculum-v4-exercises",
+                "jayanti-neu/better-days-towing",
+                "jayanti-neu/clinic",
+                "jayanti-neu/clinic-app",
+                "jayanti-neu/freight-tracker-frontend",
+                "jayanti-neu/garrett-hidden",
+                "jayanti-neu/holy-tongue",
+                "jayanti-neu/household-partners",
+                "jayanti-neu/inventory-management",
+                "jayanti-neu/jayanti-neu",
+                "jayanti-neu/lantern-starter",
+                "jayanti-neu/new-tehillim",
+                "jayanti-neu/node-homework",
+                "jayanti-neu/nu-finish-site",
+                "jayanti-neu/psalms-transliterated",
+                "jayanti-neu/tehillim",
+                "jayanti-neu/test-deploy-ctd",
+                "jayanti-neu/tikkun-haklali",
+                "matheusbizservices/codethedream-react-exercises",
+                "mnichols08/open.CRM"
+              ],
+              "repoSource": "all",
               "languages": null,
               "topics": null,
-              "showOther": false,
-              "css": "/* Visual controls: light palette, then the viewer’s dark preference. */\nsvg {\n  --sky-background: #f7f8fc;\n  --sky-foreground: #18213a;\n  --sky-accent: #395bbe;\n  --sky-line: #aab6d3;\n  --sky-star: #966500;\n}\n@media (prefers-color-scheme: dark) {\n  svg {\n    --sky-background: #080e20;\n    --sky-foreground: #e6edff;\n    --sky-accent: #9ab9ff;\n    --sky-line: #3e537e;\n    --sky-star: #f6d99b;\n  }\n}\n.connections { stroke-width: 0.9; opacity: 0.8; }\n.shared-language[data-emphasis=\"secondary\"] { opacity: 0.13; }\n.bridges { stroke-width: 0.9; opacity: 0.35; }\n.star { filter: drop-shadow(0 0 2px var(--sky-star)); }\n.dust { opacity: 0.5; }\n.language text, .repo-label { font-size: 10px; }\n.language, .repo-label { display: inline; }\n"
+              "contributionComet": {
+                "enabled": false
+              },
+              "title": "galaxy",
+              "layers": {},
+              "layoutRefinement": {
+                "enabled": false,
+                "intensity": 5
+              },
+              "accountType": "auto",
+              "organizationScope": "active",
+              "organizationView": "projects",
+              "organization": {
+                "contributors": {
+                  "enabled": true,
+                  "strategy": "representative",
+                  "maxRepositories": 100,
+                  "maxContributorsPerRepo": 25
+                },
+                "grouping": {
+                  "mode": "auto",
+                  "pattern": ""
+                }
+              },
+              "commitFieldData": {
+                "code-the-dream-school/react-curriculum-v4-exercises": {
+                  "repository": "Code-the-Dream-School/react-curriculum-v4-exercises",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "d5b54947168853d673b52f6cc11e18994a0110f2",
+                      "parents": [
+                        "d4c1485544375421644abe845bf5a562e48338b8",
+                        "c0c01db26090f7223e52b6ba3e4977452b6fc9c2"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-08-03T20:18:36.000Z",
+                      "subject": "Merge pull request #100 from Code-the-Dream-School/lesson-10-expanded-routing"
+                    },
+                    {
+                      "sha": "c0c01db26090f7223e52b6ba3e4977452b6fc9c2",
+                      "parents": [
+                        "d4c1485544375421644abe845bf5a562e48338b8"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-08-03T20:15:54.000Z",
+                      "subject": "add wildcard to lesson 10 routing to prevent 404."
+                    },
+                    {
+                      "sha": "d4c1485544375421644abe845bf5a562e48338b8",
+                      "parents": [
+                        "0f7be82365efb5459dc7859cfe0eab210188e948",
+                        "f9ea473734532a4f4ca3d054bc9fbb7890ced5b3"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-06-25T12:53:47.000Z",
+                      "subject": "Merge pull request #99 from Code-the-Dream-School/illustrate-pr-instructions"
+                    },
+                    {
+                      "sha": "f9ea473734532a4f4ca3d054bc9fbb7890ced5b3",
+                      "parents": [
+                        "0f7be82365efb5459dc7859cfe0eab210188e948"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-06-25T12:53:32.000Z",
+                      "subject": "Update README with pr illustration"
+                    },
+                    {
+                      "sha": "0f7be82365efb5459dc7859cfe0eab210188e948",
+                      "parents": [
+                        "9703a3ff46c63dadbf8abca426af65904b9eef6e",
+                        "ea3195f0b60efb83a17a97d9df0bcebeacf2564b"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-03-11T14:37:16.000Z",
+                      "subject": "Merge pull request #57 from Code-the-Dream-School/copilot/change-week-to-lesson"
+                    },
+                    {
+                      "sha": "ea3195f0b60efb83a17a97d9df0bcebeacf2564b",
+                      "parents": [
+                        "64f69660889a5e53bff24fe81df2fec1ec70f481"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-11T14:15:54.000Z",
+                      "subject": "fix: remove welcome messages and singularize 'exercises' across instructions"
+                    },
+                    {
+                      "sha": "64f69660889a5e53bff24fe81df2fec1ec70f481",
+                      "parents": [
+                        "b1857b947338bc095bb9db182259ad128bb0c703"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-11T13:41:23.000Z",
+                      "subject": "fix: address review feedback on instructions and README wording"
+                    },
+                    {
+                      "sha": "b1857b947338bc095bb9db182259ad128bb0c703",
+                      "parents": [
+                        "4fe0faa192091e31f53518301cd6f40692cffc60"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-11T13:19:23.000Z",
+                      "subject": "fix: update wording in instructions.md and instructions-template.md per review feedback"
+                    },
+                    {
+                      "sha": "4fe0faa192091e31f53518301cd6f40692cffc60",
+                      "parents": [
+                        "c7c3c5501b680b234160a5e95969cff0710b3429"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-10T15:00:01.000Z",
+                      "subject": "feat: rename week to lesson throughout codebase"
+                    },
+                    {
+                      "sha": "c7c3c5501b680b234160a5e95969cff0710b3429",
+                      "parents": [
+                        "9703a3ff46c63dadbf8abca426af65904b9eef6e"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-10T14:40:24.000Z",
+                      "subject": "Initial plan"
+                    },
+                    {
+                      "sha": "9703a3ff46c63dadbf8abca426af65904b9eef6e",
+                      "parents": [
+                        "7f848d86d448242ce433a2325a69d429549c28e2",
+                        "fae5bef07b53cb1e82162d43ccc661b09b72c830"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-03-02T14:45:35.000Z",
+                      "subject": "Merge pull request #55 from Code-the-Dream-School/copilot/add-contributing-and-code-of-conduct"
+                    },
+                    {
+                      "sha": "fae5bef07b53cb1e82162d43ccc661b09b72c830",
+                      "parents": [
+                        "122f91a9405122b36a2d8196d5dcd0cd8a3db08d"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-02T14:43:11.000Z",
+                      "subject": "Clarify lint step: fix non-intentional errors, safely ignore intentional ones"
+                    },
+                    {
+                      "sha": "122f91a9405122b36a2d8196d5dcd0cd8a3db08d",
+                      "parents": [
+                        "0f6d1bd97c37da88b644f23d6a56e4056d938c6e"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-02T14:37:58.000Z",
+                      "subject": "Revise lint guidance: intentional errors can be safely ignored, no eslint-disable needed"
+                    },
+                    {
+                      "sha": "0f6d1bd97c37da88b644f23d6a56e4056d938c6e",
+                      "parents": [
+                        "ae1c0191350cc4684237bf56e01f4b062813b56e"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-02T14:34:56.000Z",
+                      "subject": "Address review feedback on CONTRIBUTING.md; add instructions-template.md"
+                    },
+                    {
+                      "sha": "ae1c0191350cc4684237bf56e01f4b062813b56e",
+                      "parents": [
+                        "caf37e2387487fddf827666b024a35b24be1b00f"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-02T14:16:44.000Z",
+                      "subject": "Add .github/CONTRIBUTING.md and .github/CODE_OF_CONDUCT.md"
+                    },
+                    {
+                      "sha": "caf37e2387487fddf827666b024a35b24be1b00f",
+                      "parents": [
+                        "7f848d86d448242ce433a2325a69d429549c28e2"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-02T14:13:57.000Z",
+                      "subject": "Initial plan"
+                    },
+                    {
+                      "sha": "7f848d86d448242ce433a2325a69d429549c28e2",
+                      "parents": [
+                        "d83814122fc4ec7de973f38f41d785b3517cff40",
+                        "39d7cc04ec844c32100e9103323842c22d3c5883"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-01-23T15:40:43.000Z",
+                      "subject": "Merge pull request #53 from Code-the-Dream-School/12-week-10-exercises"
+                    },
+                    {
+                      "sha": "39d7cc04ec844c32100e9103323842c22d3c5883",
+                      "parents": [
+                        "b8b761bba0beca1e3d196f5cffb0afa8a8ccf27f"
+                      ],
+                      "login": "egomadking",
+                      "author": "egomadking",
+                      "date": "2026-01-23T15:39:46.000Z",
+                      "subject": "add task step to import products"
+                    },
+                    {
+                      "sha": "b8b761bba0beca1e3d196f5cffb0afa8a8ccf27f",
+                      "parents": [
+                        "e7189692b3221fd37bd84e8aa88e00a32e372b53"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-01-22T18:06:19.000Z",
+                      "subject": "updates the assessment criteria"
+                    },
+                    {
+                      "sha": "e7189692b3221fd37bd84e8aa88e00a32e372b53",
+                      "parents": [
+                        "ef3a1179bf13558636c2a5e6f4890711f00fbf5d"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-01-22T17:54:17.000Z",
+                      "subject": "update to reflect suggestions"
+                    },
+                    {
+                      "sha": "d83814122fc4ec7de973f38f41d785b3517cff40",
+                      "parents": [
+                        "1c92ffe208b271ea2541cd4f50603e73d66fa423",
+                        "27510f7e12f17cb75d8a5d02999081d1dca3e198"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-01-22T14:31:40.000Z",
+                      "subject": "Merge pull request #50 from Code-the-Dream-School/7-week-05-exercises"
+                    },
+                    {
+                      "sha": "27510f7e12f17cb75d8a5d02999081d1dca3e198",
+                      "parents": [
+                        "e728118728c67c3de19cbd87a844511f396b363a"
+                      ],
+                      "login": "egomadking",
+                      "author": "egomadking",
+                      "date": "2026-01-22T14:31:24.000Z",
+                      "subject": "re-number steps, have students remove required attr"
+                    },
+                    {
+                      "sha": "ef3a1179bf13558636c2a5e6f4890711f00fbf5d",
+                      "parents": [
+                        "11bf51db745f83604952c7165f8287c8e1588ba8"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-01-20T17:09:52.000Z",
+                      "subject": "fixes suggestions given by copilot"
+                    },
+                    {
+                      "sha": "11bf51db745f83604952c7165f8287c8e1588ba8",
+                      "parents": [
+                        "371cff40911b2f0e3cab4f36c056127413e428cf"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-01-20T03:29:23.000Z",
+                      "subject": "adds week 10 exercises"
+                    }
+                  ],
+                  "partial": true,
+                  "diagnostic": ""
+                },
+                "chingu-voyages/v49-tier1-team-05": {
+                  "repository": "chingu-voyages/v49-tier1-team-05",
+                  "branch": "development",
+                  "commits": [
+                    {
+                      "sha": "33d2057e1633d8702f4c4343b7f649285d2a6377",
+                      "parents": [
+                        "a74433931bac73b35631a837e742689aa9b57698",
+                        "94fff92858c01093d892d42d73b494d76c408f39"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-06-13T23:14:23.000Z",
+                      "subject": "Merge pull request #86 from chingu-voyages/task/styleform/jd"
+                    },
+                    {
+                      "sha": "94fff92858c01093d892d42d73b494d76c408f39",
+                      "parents": [
+                        "3dc8f427922dd87f8d9084c14439b46f50f7ecd1",
+                        "a74433931bac73b35631a837e742689aa9b57698"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-06-13T23:13:19.000Z",
+                      "subject": "Merge branch 'development' into task/styleform/jd"
+                    },
+                    {
+                      "sha": "a74433931bac73b35631a837e742689aa9b57698",
+                      "parents": [
+                        "5e7b1e6a9432fb87271bf28fc62417f197da5a8b",
+                        "46dd5e75f3b43c46a4e84ed2d873b0957224b0b5"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-06-13T20:49:14.000Z",
+                      "subject": "Merge pull request #85 from chingu-voyages/task/responsive/jd"
+                    },
+                    {
+                      "sha": "46dd5e75f3b43c46a4e84ed2d873b0957224b0b5",
+                      "parents": [
+                        "5e7b1e6a9432fb87271bf28fc62417f197da5a8b"
+                      ],
+                      "login": "JoDepp",
+                      "author": "JoDepp",
+                      "date": "2024-06-13T02:20:43.000Z",
+                      "subject": "increased palette size for desktop and mobile"
+                    },
+                    {
+                      "sha": "3dc8f427922dd87f8d9084c14439b46f50f7ecd1",
+                      "parents": [
+                        "4964c6f24879ff80ec13a0f5ff8feff97c697c41"
+                      ],
+                      "login": "JoDepp",
+                      "author": "JoDepp",
+                      "date": "2024-06-13T00:56:49.000Z",
+                      "subject": "cleaned up form"
+                    },
+                    {
+                      "sha": "4964c6f24879ff80ec13a0f5ff8feff97c697c41",
+                      "parents": [
+                        "d9198f87794af40ed8422c0df5d65a9a6a61d466"
+                      ],
+                      "login": "JoDepp",
+                      "author": "JoDepp",
+                      "date": "2024-06-13T00:49:01.000Z",
+                      "subject": "made some changes to form"
+                    },
+                    {
+                      "sha": "5e7b1e6a9432fb87271bf28fc62417f197da5a8b",
+                      "parents": [
+                        "d9198f87794af40ed8422c0df5d65a9a6a61d466"
+                      ],
+                      "login": "rybyrdsong",
+                      "author": "rybyrdsong",
+                      "date": "2024-06-12T14:25:45.000Z",
+                      "subject": "Create CALENDAR OF EVENTS"
+                    },
+                    {
+                      "sha": "d9198f87794af40ed8422c0df5d65a9a6a61d466",
+                      "parents": [
+                        "e5e0feaa5e32a07c170df5175d0e5ce5d55ef579",
+                        "2c0d7648d6e19d1a89d998ece21cbe00a31e540c"
+                      ],
+                      "login": "JoDepp",
+                      "author": "JoDepp",
+                      "date": "2024-06-11T21:59:27.000Z",
+                      "subject": "merging dev into my branch"
+                    },
+                    {
+                      "sha": "e5e0feaa5e32a07c170df5175d0e5ce5d55ef579",
+                      "parents": [
+                        "dea696ae28294e9bd97b318743b2b6e783700022"
+                      ],
+                      "login": "JoDepp",
+                      "author": "JoDepp",
+                      "date": "2024-06-11T21:56:42.000Z",
+                      "subject": " Responsive and styling button"
+                    },
+                    {
+                      "sha": "2c0d7648d6e19d1a89d998ece21cbe00a31e540c",
+                      "parents": [
+                        "dea696ae28294e9bd97b318743b2b6e783700022",
+                        "73aa71edef30c39f248cf6ce0addd88ea9a60c33"
+                      ],
+                      "login": "JoDepp",
+                      "author": "JoDepp",
+                      "date": "2024-06-11T21:46:56.000Z",
+                      "subject": "Merge pull request #71 from chingu-voyages/ai-form/jh"
+                    },
+                    {
+                      "sha": "dea696ae28294e9bd97b318743b2b6e783700022",
+                      "parents": [
+                        "f9c008f564c2b103a52eb61df52d9708e7831015"
+                      ],
+                      "login": "goldilocks0164",
+                      "author": "goldilocks0164",
+                      "date": "2024-06-11T20:58:17.000Z",
+                      "subject": "Update SECURITY.md"
+                    },
+                    {
+                      "sha": "f9c008f564c2b103a52eb61df52d9708e7831015",
+                      "parents": [
+                        "0f9a9737c2aeffb0c65e06ca71c15a7f6c2c994c",
+                        "eb112e57f02b0cc04bddbde7f00b4fe6daae8654"
+                      ],
+                      "login": "rybyrdsong",
+                      "author": "rybyrdsong",
+                      "date": "2024-06-11T20:56:51.000Z",
+                      "subject": "Merge pull request #72 from chingu-voyages/goldilocks0164-patch-2"
+                    },
+                    {
+                      "sha": "eb112e57f02b0cc04bddbde7f00b4fe6daae8654",
+                      "parents": [
+                        "0f9a9737c2aeffb0c65e06ca71c15a7f6c2c994c"
+                      ],
+                      "login": "goldilocks0164",
+                      "author": "goldilocks0164",
+                      "date": "2024-06-11T20:54:46.000Z",
+                      "subject": "Rename Security.md to SECURITY.md"
+                    },
+                    {
+                      "sha": "0f9a9737c2aeffb0c65e06ca71c15a7f6c2c994c",
+                      "parents": [
+                        "e10c3d6264c70bc3f643ed1111482477231dcbba"
+                      ],
+                      "login": "goldilocks0164",
+                      "author": "goldilocks0164",
+                      "date": "2024-06-11T20:51:33.000Z",
+                      "subject": "Rename Code_of_Conduct.md to CODE_OF_CONDUCT.md"
+                    },
+                    {
+                      "sha": "e10c3d6264c70bc3f643ed1111482477231dcbba",
+                      "parents": [
+                        "cb63c480932fd9516c73aa9db7d2dc92df4248e4"
+                      ],
+                      "login": "goldilocks0164",
+                      "author": "goldilocks0164",
+                      "date": "2024-06-11T20:50:12.000Z",
+                      "subject": "Create CONTRIBUTING.md"
+                    },
+                    {
+                      "sha": "73aa71edef30c39f248cf6ce0addd88ea9a60c33",
+                      "parents": [
+                        "3366b4e4d6c24ad3da41cfe5052912f41303d19e",
+                        "cb63c480932fd9516c73aa9db7d2dc92df4248e4"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-06-11T17:43:29.000Z",
+                      "subject": "Merge branch 'development' into ai-form/jh"
+                    },
+                    {
+                      "sha": "3366b4e4d6c24ad3da41cfe5052912f41303d19e",
+                      "parents": [
+                        "39248e6d01c27d55669298eb8de71c130a7582f0",
+                        "7ff3088defac0dfbf493dcad940bb99806004c3e"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-06-11T17:33:06.000Z",
+                      "subject": "Merge remote-tracking branch 'origin/task/uxcolorwheel/jd' into ai-form/jh"
+                    },
+                    {
+                      "sha": "39248e6d01c27d55669298eb8de71c130a7582f0",
+                      "parents": [
+                        "68c38e817ca5fae01ec54c03b9adbf208865e802",
+                        "e398fcd7563958ad56c64fcc8b2e116330654752"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-06-11T17:28:15.000Z",
+                      "subject": "Merge remote-tracking branch 'origin/task/headerlogo/jd' into ai-form/jh"
+                    },
+                    {
+                      "sha": "cb63c480932fd9516c73aa9db7d2dc92df4248e4",
+                      "parents": [
+                        "6ac341b662564420343bbf40840715369cf32119",
+                        "68c38e817ca5fae01ec54c03b9adbf208865e802"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-06-11T17:21:23.000Z",
+                      "subject": "Merge pull request #70 from chingu-voyages/ai-form/jh"
+                    },
+                    {
+                      "sha": "68c38e817ca5fae01ec54c03b9adbf208865e802",
+                      "parents": [
+                        "867b9bfd0ee29fa73cbe03d73dcc6ac029916ec3"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-06-11T17:18:06.000Z",
+                      "subject": "fixes the ai form"
+                    },
+                    {
+                      "sha": "6ac341b662564420343bbf40840715369cf32119",
+                      "parents": [
+                        "11401015c00c0acad26a28040a3130ebf0f9e20b",
+                        "5f9f3ec397a932f65cf54de26f9490a82fd1d215"
+                      ],
+                      "login": "Mikelovin23",
+                      "author": "Mikelovin23",
+                      "date": "2024-06-11T16:43:25.000Z",
+                      "subject": "Merge pull request #53 from chingu-voyages/rybyrdsong-patch-1"
+                    },
+                    {
+                      "sha": "11401015c00c0acad26a28040a3130ebf0f9e20b",
+                      "parents": [
+                        "075a5a3911411a9be9f17283848025e0c14ab6eb",
+                        "e40735aada075f0acdfd0ff75447677782811cc8"
+                      ],
+                      "login": "Mikelovin23",
+                      "author": "Mikelovin23",
+                      "date": "2024-06-11T16:43:07.000Z",
+                      "subject": "Merge pull request #54 from chingu-voyages/rybyrdsong-patch-2"
+                    },
+                    {
+                      "sha": "075a5a3911411a9be9f17283848025e0c14ab6eb",
+                      "parents": [
+                        "d265b517d3dcf579a17088114ede3d7304bcbac0",
+                        "c114197dc2e7f3d5bd9d4d3ef89bc2f44241ae9d"
+                      ],
+                      "login": "Mikelovin23",
+                      "author": "Mikelovin23",
+                      "date": "2024-06-11T16:42:38.000Z",
+                      "subject": "Merge pull request #55 from chingu-voyages/rybyrdsong-patch-3"
+                    },
+                    {
+                      "sha": "e40735aada075f0acdfd0ff75447677782811cc8",
+                      "parents": [
+                        "60b6153802b1ff9a504fc9cda6b4e1ac1ad8b3f8"
+                      ],
+                      "login": "Mikelovin23",
+                      "author": "Mikelovin23",
+                      "date": "2024-06-11T16:42:19.000Z",
+                      "subject": "Rename README.md to docs/README.md"
+                    }
+                  ],
+                  "partial": true,
+                  "diagnostic": ""
+                },
+                "code-the-dream-school/react-curriculum-v4": {
+                  "repository": "Code-the-Dream-School/react-curriculum-v4",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "8cc96012ccb48d33d619f3c9a355c503616f693f",
+                      "parents": [
+                        "f57980a8112fa679fda895edd08e0ef736c4e3dc"
+                      ],
+                      "login": "mamooredesigns",
+                      "author": "mamooredesigns",
+                      "date": "2026-09-28T16:32:54.000Z",
+                      "subject": "Update 11-finalize-app-portfolio-app-and-data-security-deploying-a-react-app.md"
+                    },
+                    {
+                      "sha": "f57980a8112fa679fda895edd08e0ef736c4e3dc",
+                      "parents": [
+                        "f33a0761c4647633ac16728b003267f736959765"
+                      ],
+                      "login": "mamooredesigns",
+                      "author": "mamooredesigns",
+                      "date": "2026-09-28T16:26:53.000Z",
+                      "subject": "Update 09-advanced-state-useReducer-useContext-continued.md"
+                    },
+                    {
+                      "sha": "f33a0761c4647633ac16728b003267f736959765",
+                      "parents": [
+                        "2e344dc2e168860a4fa0f9a4041087b70a499767",
+                        "2571c2e3495f4b24f4f863c85508ad998890311d"
+                      ],
+                      "login": "mamooredesigns",
+                      "author": "mamooredesigns",
+                      "date": "2026-09-25T14:48:28.000Z",
+                      "subject": "Merge pull request #221 from Code-the-Dream-School/26_4"
+                    },
+                    {
+                      "sha": "2571c2e3495f4b24f4f863c85508ad998890311d",
+                      "parents": [
+                        "6b81cd26807b6312c8e57a086ea40576b57050e1",
+                        "3c46bd17f203f8e3139daac35ce27073935a3aef"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-09-22T16:20:20.000Z",
+                      "subject": "Merge pull request #220 from Code-the-Dream-School/mentor-guide-links"
+                    },
+                    {
+                      "sha": "3c46bd17f203f8e3139daac35ce27073935a3aef",
+                      "parents": [
+                        "6b81cd26807b6312c8e57a086ea40576b57050e1"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-09-22T16:18:17.000Z",
+                      "subject": "Update lesson guides to include clickable links for assignments and curriculum repository"
+                    },
+                    {
+                      "sha": "6b81cd26807b6312c8e57a086ea40576b57050e1",
+                      "parents": [
+                        "2e344dc2e168860a4fa0f9a4041087b70a499767",
+                        "13b6b9155c0d1c9cd0880cd842c65a9da9c0ddcd"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-09-22T15:58:24.000Z",
+                      "subject": "Merge branch 'airhub-revisions' into 26_4"
+                    },
+                    {
+                      "sha": "2e344dc2e168860a4fa0f9a4041087b70a499767",
+                      "parents": [
+                        "ebf626b5e771e88ec9d683d0a72f3abd78f7e225",
+                        "4185fe84f509e51cdae13638630d2be89e2f4926"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-09-22T15:41:48.000Z",
+                      "subject": "Merge pull request #218 from Code-the-Dream-School/26_4"
+                    },
+                    {
+                      "sha": "4185fe84f509e51cdae13638630d2be89e2f4926",
+                      "parents": [
+                        "48f0a0200e2803ac454518aca948d2fa1924ac88",
+                        "ebf626b5e771e88ec9d683d0a72f3abd78f7e225"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-09-22T15:41:11.000Z",
+                      "subject": "Merge pull request #217 from Code-the-Dream-School/main"
+                    },
+                    {
+                      "sha": "ebf626b5e771e88ec9d683d0a72f3abd78f7e225",
+                      "parents": [
+                        "77cfeca3a5e81d4779232274c6be97c5aea4c00e",
+                        "a702f8e819461ada19c8b6a87d76a8bb0a44361a"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-09-22T15:30:46.000Z",
+                      "subject": "Merge pull request #199 from Code-the-Dream-School/pagination-params-and-react-router"
+                    },
+                    {
+                      "sha": "a702f8e819461ada19c8b6a87d76a8bb0a44361a",
+                      "parents": [
+                        "1a1d3c4759cda3937322f25474500785ea670de7",
+                        "77cfeca3a5e81d4779232274c6be97c5aea4c00e"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-09-22T15:30:29.000Z",
+                      "subject": "Merge branch 'main' into pagination-params-and-react-router"
+                    },
+                    {
+                      "sha": "1a1d3c4759cda3937322f25474500785ea670de7",
+                      "parents": [
+                        "341ff722e1c47256159a67ee8583cd308279785b"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-09-22T15:29:09.000Z",
+                      "subject": "Refactor pagination parameters with validation"
+                    },
+                    {
+                      "sha": "13b6b9155c0d1c9cd0880cd842c65a9da9c0ddcd",
+                      "parents": [
+                        "c86e606e4df8a1ee4ee8d80b86ed2607da7301eb"
+                      ],
+                      "login": "mamooredesigns",
+                      "author": "mamooredesigns",
+                      "date": "2026-09-15T22:38:38.000Z",
+                      "subject": "additional airhub edits after talking to Roy"
+                    },
+                    {
+                      "sha": "c86e606e4df8a1ee4ee8d80b86ed2607da7301eb",
+                      "parents": [
+                        "77cd5d79d18084a830f5634ac144788cd43f8d21"
+                      ],
+                      "login": "mamooredesigns",
+                      "author": "mamooredesigns",
+                      "date": "2026-09-11T17:32:53.000Z",
+                      "subject": "lesson 11 airhub adjustments made using opus 4.6"
+                    },
+                    {
+                      "sha": "77cd5d79d18084a830f5634ac144788cd43f8d21",
+                      "parents": [
+                        "ec12408dd5736e5f9cc8e523de77c0d22745966b"
+                      ],
+                      "login": "mamooredesigns",
+                      "author": "mamooredesigns",
+                      "date": "2026-09-11T17:16:40.000Z",
+                      "subject": "lesson 10 airhub adjustments made using opus 4.6"
+                    },
+                    {
+                      "sha": "ec12408dd5736e5f9cc8e523de77c0d22745966b",
+                      "parents": [
+                        "085bc3c786ccfa0fb9ad6ae5261f81d75a98dc47"
+                      ],
+                      "login": "mamooredesigns",
+                      "author": "mamooredesigns",
+                      "date": "2026-09-11T16:56:16.000Z",
+                      "subject": "lesson 9 airhub adjustments made using opus 4.6"
+                    },
+                    {
+                      "sha": "085bc3c786ccfa0fb9ad6ae5261f81d75a98dc47",
+                      "parents": [
+                        "dad10910d7be834fd2faaa262581c8fa364b7c01"
+                      ],
+                      "login": "mamooredesigns",
+                      "author": "mamooredesigns",
+                      "date": "2026-09-11T15:31:03.000Z",
+                      "subject": "lesson 8 airhub adjustments made using opus 4.6"
+                    },
+                    {
+                      "sha": "dad10910d7be834fd2faaa262581c8fa364b7c01",
+                      "parents": [
+                        "65059d5e016e394c5b73bab560af5c4d7ec8217c"
+                      ],
+                      "login": "mamooredesigns",
+                      "author": "mamooredesigns",
+                      "date": "2026-09-11T14:37:26.000Z",
+                      "subject": "lesson 7 airhub adjustments made using opus 4.6"
+                    },
+                    {
+                      "sha": "77cfeca3a5e81d4779232274c6be97c5aea4c00e",
+                      "parents": [
+                        "e1992ad74081c4c4e43c91d19bdc0115c41bf386",
+                        "77702967d77b6e56a95a000e4d1b5b716d3d28bb"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-09-11T13:04:53.000Z",
+                      "subject": "Merge pull request #212 from Code-the-Dream-School/todo-stats-example-fix"
+                    },
+                    {
+                      "sha": "77702967d77b6e56a95a000e4d1b5b716d3d28bb",
+                      "parents": [
+                        "e1992ad74081c4c4e43c91d19bdc0115c41bf386"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-09-11T13:03:53.000Z",
+                      "subject": "fix: update todo statistics calculation to reflect correct data structure"
+                    },
+                    {
+                      "sha": "65059d5e016e394c5b73bab560af5c4d7ec8217c",
+                      "parents": [
+                        "18b7feaf69b5cd5e51c6b6279599cb32521d4659"
+                      ],
+                      "login": "mamooredesigns",
+                      "author": "mamooredesigns",
+                      "date": "2026-09-10T17:36:54.000Z",
+                      "subject": "lesson 6 airhub adjustments made using opus 4.6"
+                    },
+                    {
+                      "sha": "18b7feaf69b5cd5e51c6b6279599cb32521d4659",
+                      "parents": [
+                        "3ab71bd547aeac80bd68277d3aab59a57b612af9"
+                      ],
+                      "login": "mamooredesigns",
+                      "author": "mamooredesigns",
+                      "date": "2026-09-10T17:20:09.000Z",
+                      "subject": "lesson 5 airhub adjustments made using opus 4.6"
+                    },
+                    {
+                      "sha": "3ab71bd547aeac80bd68277d3aab59a57b612af9",
+                      "parents": [
+                        "7efde94ce3d4c3970351eecdd988db679e455a08"
+                      ],
+                      "login": "mamooredesigns",
+                      "author": "mamooredesigns",
+                      "date": "2026-09-09T19:31:48.000Z",
+                      "subject": "lesson 4 airhub adjustments made using opus 4.6"
+                    },
+                    {
+                      "sha": "7efde94ce3d4c3970351eecdd988db679e455a08",
+                      "parents": [
+                        "b79c090b738b8cfd6cde4a72c4249c443dd2d08a"
+                      ],
+                      "login": "mamooredesigns",
+                      "author": "mamooredesigns",
+                      "date": "2026-09-09T19:14:36.000Z",
+                      "subject": "lesson 3 airhub adjustments made using opus 4.6"
+                    },
+                    {
+                      "sha": "b79c090b738b8cfd6cde4a72c4249c443dd2d08a",
+                      "parents": [
+                        "279e178974f2ab689385a3d649bb0a1403cd6358"
+                      ],
+                      "login": "mamooredesigns",
+                      "author": "mamooredesigns",
+                      "date": "2026-09-09T18:35:48.000Z",
+                      "subject": "lesson 2 airhub adjustments made using opus 4.6"
+                    }
+                  ],
+                  "partial": true,
+                  "diagnostic": ""
+                },
+                "mnichols08/open.crm": {
+                  "repository": "mnichols08/open.CRM",
+                  "branch": "development",
+                  "commits": [
+                    {
+                      "sha": "3fe2ec532667d58c945ca32dde3e6d3548a17ae4",
+                      "parents": [
+                        "93a318314859cac4d082cf03d1d1fa1d38e76f98",
+                        "908c4212c464e9732bf0bf9dfc2e0cd736c93486"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-08-18T02:22:28.000Z",
+                      "subject": "Merge pull request #66 from mnichols08/27/feat/ticket-management"
+                    },
+                    {
+                      "sha": "908c4212c464e9732bf0bf9dfc2e0cd736c93486",
+                      "parents": [
+                        "6b71edac153c260aa8b8055032161b18c0f2fbc1"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-08-17T04:18:21.000Z",
+                      "subject": "fixes build issue and width of the combobox"
+                    },
+                    {
+                      "sha": "6b71edac153c260aa8b8055032161b18c0f2fbc1",
+                      "parents": [
+                        "93a318314859cac4d082cf03d1d1fa1d38e76f98"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-08-17T02:50:05.000Z",
+                      "subject": "customer drop down changed to combo box"
+                    },
+                    {
+                      "sha": "93a318314859cac4d082cf03d1d1fa1d38e76f98",
+                      "parents": [
+                        "83ab978b1ea8e1472faaa8f4d00729a5fcac5935",
+                        "49f0916155f1d1baf2502a4fac5ad893be0fcf04"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-08-15T01:42:31.000Z",
+                      "subject": "Merge pull request #64 from mnichols08/delete-component"
+                    },
+                    {
+                      "sha": "49f0916155f1d1baf2502a4fac5ad893be0fcf04",
+                      "parents": [
+                        "fe5aa1548933a8bccc428e8fcc10ff67cbe10a43"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-08-14T23:12:00.000Z",
+                      "subject": "delete and update note working"
+                    },
+                    {
+                      "sha": "fe5aa1548933a8bccc428e8fcc10ff67cbe10a43",
+                      "parents": [
+                        "c23ab9601b9f3a818f5353ee453861db8583bc1f"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-08-14T15:44:27.000Z",
+                      "subject": "notes not completely working"
+                    },
+                    {
+                      "sha": "c23ab9601b9f3a818f5353ee453861db8583bc1f",
+                      "parents": [
+                        "fe8c984eadf0942955b89fdc62656d2deca1978c"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-08-14T00:03:45.000Z",
+                      "subject": "product delete works"
+                    },
+                    {
+                      "sha": "fe8c984eadf0942955b89fdc62656d2deca1978c",
+                      "parents": [
+                        "208582909aec7bb2046834c208a6f25a3ef6428d"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-08-13T23:39:22.000Z",
+                      "subject": "delete order works"
+                    },
+                    {
+                      "sha": "208582909aec7bb2046834c208a6f25a3ef6428d",
+                      "parents": [
+                        "ed98194cdadca0be5358c6a71c2b970e7caee900"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-08-13T23:18:09.000Z",
+                      "subject": "customer delete works"
+                    },
+                    {
+                      "sha": "83ab978b1ea8e1472faaa8f4d00729a5fcac5935",
+                      "parents": [
+                        "4224f5c8c55f98bf629da33770b3b0b2c2706013",
+                        "ed98194cdadca0be5358c6a71c2b970e7caee900"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-08-13T02:56:42.000Z",
+                      "subject": "Merge pull request #63 from mnichols08/delete-component"
+                    },
+                    {
+                      "sha": "ed98194cdadca0be5358c6a71c2b970e7caee900",
+                      "parents": [
+                        "4224f5c8c55f98bf629da33770b3b0b2c2706013"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-08-13T02:54:47.000Z",
+                      "subject": "delete ticket button works"
+                    },
+                    {
+                      "sha": "4224f5c8c55f98bf629da33770b3b0b2c2706013",
+                      "parents": [
+                        "95a0df1acd1a1af5aa868ba7f1559156f23b7215",
+                        "fb155971468c7010398ebc7fce697c5f4d767bea"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-08-11T22:25:53.000Z",
+                      "subject": "Merge pull request #62 from mnichols08/feat/view-components"
+                    },
+                    {
+                      "sha": "fb155971468c7010398ebc7fce697c5f4d767bea",
+                      "parents": [
+                        "551db13ea69f0d2ef8529aefdb721fa9ac1cbecc"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-08-11T00:31:42.000Z",
+                      "subject": "fixes auth bug"
+                    },
+                    {
+                      "sha": "551db13ea69f0d2ef8529aefdb721fa9ac1cbecc",
+                      "parents": [
+                        "e819e2f278a68dfe2c06ae0695a133dbf3fed21e",
+                        "a1005bf360061b0a9e7c5b5f40571388a73bae6a"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-08-10T23:25:17.000Z",
+                      "subject": "Merge branch 'feat/view-components' of github.com:mnichols08/open.CRM into feat/view-components"
+                    },
+                    {
+                      "sha": "a1005bf360061b0a9e7c5b5f40571388a73bae6a",
+                      "parents": [
+                        "6a231a79993be65c3291baaa0e9d27a114966d7a"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-08-10T23:24:32.000Z",
+                      "subject": "fixes database seed file"
+                    },
+                    {
+                      "sha": "e819e2f278a68dfe2c06ae0695a133dbf3fed21e",
+                      "parents": [
+                        "6a231a79993be65c3291baaa0e9d27a114966d7a",
+                        "95a0df1acd1a1af5aa868ba7f1559156f23b7215"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-08-10T22:32:04.000Z",
+                      "subject": "Merge remote-tracking branch 'origin/development' into feat/view-components"
+                    },
+                    {
+                      "sha": "6a231a79993be65c3291baaa0e9d27a114966d7a",
+                      "parents": [
+                        "15c03515e8a236c4981a0635dfb26ee15b26f714"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-08-10T21:43:39.000Z",
+                      "subject": "creates additional customer info"
+                    },
+                    {
+                      "sha": "95a0df1acd1a1af5aa868ba7f1559156f23b7215",
+                      "parents": [
+                        "f9e93c10d546de5affdc73a56067f95f8bf488dc",
+                        "15c03515e8a236c4981a0635dfb26ee15b26f714"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-08-09T04:22:53.000Z",
+                      "subject": "Merge pull request #61 from mnichols08/26/feat/customer-management"
+                    },
+                    {
+                      "sha": "15c03515e8a236c4981a0635dfb26ee15b26f714",
+                      "parents": [
+                        "48b479c604dbf78e04f683f66399bc78f273a277"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-08-09T02:18:58.000Z",
+                      "subject": "adds customer management"
+                    },
+                    {
+                      "sha": "48b479c604dbf78e04f683f66399bc78f273a277",
+                      "parents": [
+                        "3bbecb8ccae27f3a5fd78874cd698cb368ea5046"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-08-09T01:15:11.000Z",
+                      "subject": "updates main to a form tag"
+                    },
+                    {
+                      "sha": "3bbecb8ccae27f3a5fd78874cd698cb368ea5046",
+                      "parents": [
+                        "1c8b737dcd7feabdbb0cd67fe723e7c32d0776e9"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-08-09T01:14:48.000Z",
+                      "subject": "fixes typescript issues by definng note"
+                    },
+                    {
+                      "sha": "1c8b737dcd7feabdbb0cd67fe723e7c32d0776e9",
+                      "parents": [
+                        "c07553068002eb135b32fe1050787b23491a4ded"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-08-09T01:04:59.000Z",
+                      "subject": "updates edit tickets for updating and creating new notes"
+                    },
+                    {
+                      "sha": "c07553068002eb135b32fe1050787b23491a4ded",
+                      "parents": [
+                        "f55201bd4d98b77b13c2f82dd2f224d655032132"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-08-08T16:02:40.000Z",
+                      "subject": "adds edit note functionality"
+                    },
+                    {
+                      "sha": "f9e93c10d546de5affdc73a56067f95f8bf488dc",
+                      "parents": [
+                        "fcbd743509afca18c6bfc2c27c774e35d6c2a1e8",
+                        "f55201bd4d98b77b13c2f82dd2f224d655032132"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-08-08T01:34:32.000Z",
+                      "subject": "Merge pull request #60 from mnichols08/29/feat/product-management"
+                    }
+                  ],
+                  "partial": true,
+                  "diagnostic": ""
+                },
+                "chingu-voyages/v47-tier1-team-04": {
+                  "repository": "chingu-voyages/v47-tier1-team-04",
+                  "branch": "alpha",
+                  "commits": [
+                    {
+                      "sha": "df8957eb9e80428c23e8e8e86e0c01fb4fc64540",
+                      "parents": [
+                        "ecc15eec5b8e2b8f1ff08243f2f49a014eab4136"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-05-22T00:59:35.000Z",
+                      "subject": "updates details about project"
+                    },
+                    {
+                      "sha": "ecc15eec5b8e2b8f1ff08243f2f49a014eab4136",
+                      "parents": [
+                        "896517af8fbb3a4c522c3fe384a649e8a10e650d"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-05-22T00:28:33.000Z",
+                      "subject": "updates the project data"
+                    },
+                    {
+                      "sha": "896517af8fbb3a4c522c3fe384a649e8a10e650d",
+                      "parents": [
+                        "2e670cb4e4d1ca40d8fa11995b328e7bf56d132d",
+                        "457a040ee810d4e6a8152d8a6285455a4d8638d4"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-05-22T00:24:25.000Z",
+                      "subject": "Merge pull request #522 from chingu-voyages/development"
+                    },
+                    {
+                      "sha": "457a040ee810d4e6a8152d8a6285455a4d8638d4",
+                      "parents": [
+                        "d87b981c58ce6b98ca21c7d882eaa0d36409ee88",
+                        "8c5a4b53a32e17ddb904c9dbf82e62c0111cf71c"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-05-22T00:10:25.000Z",
+                      "subject": "Merge pull request #521 from chingu-voyages/mnichols08-patch-2"
+                    },
+                    {
+                      "sha": "8c5a4b53a32e17ddb904c9dbf82e62c0111cf71c",
+                      "parents": [
+                        "d87b981c58ce6b98ca21c7d882eaa0d36409ee88"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-05-22T00:10:14.000Z",
+                      "subject": "Create project-data.json"
+                    },
+                    {
+                      "sha": "2e670cb4e4d1ca40d8fa11995b328e7bf56d132d",
+                      "parents": [
+                        "905cfdd36418d4fc978247dc2539bbb636d8f989",
+                        "c13df8d187be496b518ad96a882ca503400a6a62"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-04-06T14:06:10.000Z",
+                      "subject": "Merge pull request #520 from chingu-voyages/mnichols08-patch-1"
+                    },
+                    {
+                      "sha": "c13df8d187be496b518ad96a882ca503400a6a62",
+                      "parents": [
+                        "c001f65a68ba12c9ae43d9ad89e54dab929c4e8a"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-04-06T14:00:59.000Z",
+                      "subject": "Rename Chingu_Agile_Leadership_Cert_-_Mikey_Nichols (1).pdf to mnichols08-agile-leadership.pdf"
+                    },
+                    {
+                      "sha": "c001f65a68ba12c9ae43d9ad89e54dab929c4e8a",
+                      "parents": [
+                        "7c299d8b640b1c26863f9ceb80437ae85dd7f4a2"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-04-06T14:00:26.000Z",
+                      "subject": "Add files via upload"
+                    },
+                    {
+                      "sha": "7c299d8b640b1c26863f9ceb80437ae85dd7f4a2",
+                      "parents": [
+                        "02633e7490347b004fcffa7c4325efb9cd6616a8"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-04-06T13:59:16.000Z",
+                      "subject": "Rename cert.pdf to mnichols08-cert.pdf"
+                    },
+                    {
+                      "sha": "02633e7490347b004fcffa7c4325efb9cd6616a8",
+                      "parents": [
+                        "905cfdd36418d4fc978247dc2539bbb636d8f989"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-04-06T13:58:46.000Z",
+                      "subject": "updates mnichols08 certificate to repo"
+                    },
+                    {
+                      "sha": "905cfdd36418d4fc978247dc2539bbb636d8f989",
+                      "parents": [
+                        "059f57b23a41f1e473a127456cde95350a8e6ed5",
+                        "87f82d26d884524209a1a69c8f503d7eb958ef45"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-02-26T05:52:33.000Z",
+                      "subject": "Merge pull request #442 from chingu-voyages/revert-441-426/feat/footer-component/mn"
+                    },
+                    {
+                      "sha": "87f82d26d884524209a1a69c8f503d7eb958ef45",
+                      "parents": [
+                        "059f57b23a41f1e473a127456cde95350a8e6ed5"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-02-26T05:52:27.000Z",
+                      "subject": "Revert \"426/feat/footer component/mn\""
+                    },
+                    {
+                      "sha": "059f57b23a41f1e473a127456cde95350a8e6ed5",
+                      "parents": [
+                        "59eca2ecee403f4699d65a689e3c6d4fc2702fce",
+                        "5a678f9672b9910011e3f4b36930df17f0e7df29"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-02-26T05:52:01.000Z",
+                      "subject": "Merge pull request #441 from chingu-voyages/426/feat/footer-component/mn"
+                    },
+                    {
+                      "sha": "5a678f9672b9910011e3f4b36930df17f0e7df29",
+                      "parents": [
+                        "16c92495df9ac368e0087902105258f9aa9c8e36"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-02-26T05:48:45.000Z",
+                      "subject": "adds css"
+                    },
+                    {
+                      "sha": "16c92495df9ac368e0087902105258f9aa9c8e36",
+                      "parents": [
+                        "2921a83cfab308738a00c02db65b0a085bdcf588"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-02-26T05:48:26.000Z",
+                      "subject": "Update Chingu logo source in Footer component"
+                    },
+                    {
+                      "sha": "2921a83cfab308738a00c02db65b0a085bdcf588",
+                      "parents": [
+                        "361c07d05770e909d69a64f03043817a27c43c9d"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-02-26T05:48:20.000Z",
+                      "subject": "Update imports in App.js"
+                    },
+                    {
+                      "sha": "361c07d05770e909d69a64f03043817a27c43c9d",
+                      "parents": [
+                        "7c2f15851d3f0407974a4656b7df80c05201117a",
+                        "96dbc2296069766aa51d5001ba42440903661f3e"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-02-26T05:41:21.000Z",
+                      "subject": "Merge pull request #440 from chingu-voyages/content-static-component/jayanti"
+                    },
+                    {
+                      "sha": "96dbc2296069766aa51d5001ba42440903661f3e",
+                      "parents": [
+                        "ca48a14121012e377b07754b9449f5f48bc90810"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-02-26T05:39:27.000Z",
+                      "subject": "fixes location issue in importing"
+                    },
+                    {
+                      "sha": "7c2f15851d3f0407974a4656b7df80c05201117a",
+                      "parents": [
+                        "c2acaa8c4e255f82009931a68d185d84364d3c27",
+                        "c699a4c00760a2c6e548cdff57d4af45b502a02b"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-02-26T05:07:28.000Z",
+                      "subject": "Merge pull request #439 from chingu-voyages/429/feat/aside-static-component/jayanti"
+                    },
+                    {
+                      "sha": "c2acaa8c4e255f82009931a68d185d84364d3c27",
+                      "parents": [
+                        "653d3e5e5b09d0ff6391217bce64bceafa998b07",
+                        "ca48a14121012e377b07754b9449f5f48bc90810"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-02-26T05:06:45.000Z",
+                      "subject": "Merge pull request #438 from chingu-voyages/content-static-component/jayanti"
+                    },
+                    {
+                      "sha": "c699a4c00760a2c6e548cdff57d4af45b502a02b",
+                      "parents": [
+                        "3c0cea820d90403d4daf4a9f50dfa524267ef086"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-02-26T05:04:02.000Z",
+                      "subject": "adds export line"
+                    },
+                    {
+                      "sha": "ca48a14121012e377b07754b9449f5f48bc90810",
+                      "parents": [
+                        "16715fd80eaf10103ad15d9540dd1091bf6aa29d"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2024-02-26T05:02:34.000Z",
+                      "subject": "adds export line"
+                    },
+                    {
+                      "sha": "653d3e5e5b09d0ff6391217bce64bceafa998b07",
+                      "parents": [
+                        "74c3e88bf041785207b224765f96925339ca1f67",
+                        "3c0cea820d90403d4daf4a9f50dfa524267ef086"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-02-26T04:24:03.000Z",
+                      "subject": "Merge pull request #436 from chingu-voyages/429/feat/aside-static-component/jayanti"
+                    },
+                    {
+                      "sha": "74c3e88bf041785207b224765f96925339ca1f67",
+                      "parents": [
+                        "7a2e6e271a44163f59026f3a3a717a040723a5c1",
+                        "16715fd80eaf10103ad15d9540dd1091bf6aa29d"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2024-02-26T04:23:48.000Z",
+                      "subject": "Merge pull request #437 from chingu-voyages/content-static-component/jayanti"
+                    }
+                  ],
+                  "partial": true,
+                  "diagnostic": ""
+                },
+                "dashi-ki/react-curriculum-v4-exercises": {
+                  "repository": "dashi-ki/react-curriculum-v4-exercises",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "c80bd594d9bb646fb5fc8248d7db98d0fc564ce5",
+                      "parents": [
+                        "350831da48d46bce434611a6e991d75e235b7226",
+                        "7ada7c77c7f1acc72fac91705ec3bf3b380b5691"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-06-16T19:34:27.000Z",
+                      "subject": "Merge pull request #10 from dashi-ki/lesson-10"
+                    },
+                    {
+                      "sha": "7ada7c77c7f1acc72fac91705ec3bf3b380b5691",
+                      "parents": [
+                        "6a8486e3d90b3e73ac7b051d82f2e766bfb9ee8c"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-06-12T00:19:07.000Z",
+                      "subject": "Nest lesson-10 routes under /lessons/lesson-10"
+                    },
+                    {
+                      "sha": "6a8486e3d90b3e73ac7b051d82f2e766bfb9ee8c",
+                      "parents": [
+                        "350831da48d46bce434611a6e991d75e235b7226"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-06-10T02:10:29.000Z",
+                      "subject": "implement React Router routing and navigation"
+                    },
+                    {
+                      "sha": "350831da48d46bce434611a6e991d75e235b7226",
+                      "parents": [
+                        "bb4945a93feba7b662148de6d64e550b7bc49389",
+                        "d9bc6aef4c5034ec3e3c2269dcc34c1c36131d5a"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-06-10T00:58:32.000Z",
+                      "subject": "Merge pull request #9 from dashi-ki/lesson-9"
+                    },
+                    {
+                      "sha": "d9bc6aef4c5034ec3e3c2269dcc34c1c36131d5a",
+                      "parents": [
+                        "bb4945a93feba7b662148de6d64e550b7bc49389"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-06-04T03:23:13.000Z",
+                      "subject": "implement question and option editing/deletion"
+                    },
+                    {
+                      "sha": "bb4945a93feba7b662148de6d64e550b7bc49389",
+                      "parents": [
+                        "cfd99a25a870e3f4b3e0a920cd78d3bb31a6984c",
+                        "011d974de642eb13d6cb4fcdb05c3244b87246a0"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-06-04T01:17:51.000Z",
+                      "subject": "Merge pull request #8 from dashi-ki/lesson-8"
+                    },
+                    {
+                      "sha": "011d974de642eb13d6cb4fcdb05c3244b87246a0",
+                      "parents": [
+                        "cfd99a25a870e3f4b3e0a920cd78d3bb31a6984c"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-05-27T01:35:11.000Z",
+                      "subject": "completed lesson instuctions"
+                    },
+                    {
+                      "sha": "cfd99a25a870e3f4b3e0a920cd78d3bb31a6984c",
+                      "parents": [
+                        "693a68eee1300794527762898a0251e3241d2e5c",
+                        "3736106ef64b49158ecf6d41e9ce6ac4e2c9cd78"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-05-26T23:36:40.000Z",
+                      "subject": "Merge pull request #7 from dashi-ki/lesson-7"
+                    },
+                    {
+                      "sha": "3736106ef64b49158ecf6d41e9ce6ac4e2c9cd78",
+                      "parents": [
+                        "693a68eee1300794527762898a0251e3241d2e5c"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-05-20T02:50:05.000Z",
+                      "subject": "implement lesson-07 data fetching components"
+                    },
+                    {
+                      "sha": "693a68eee1300794527762898a0251e3241d2e5c",
+                      "parents": [
+                        "828380fd3ce82aa650f27dd8fc5ae227f7534c8e",
+                        "dce36cdeeabcfa80c17121e3199d16c9ddfc189b"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-05-20T01:35:36.000Z",
+                      "subject": "Merge pull request #6 from dashi-ki/lesson-6"
+                    },
+                    {
+                      "sha": "dce36cdeeabcfa80c17121e3199d16c9ddfc189b",
+                      "parents": [
+                        "a48fe56ab29dfd30546be4333e70b01f070cb165"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-05-13T01:20:02.000Z",
+                      "subject": "Create lesson-6-final-result.png"
+                    },
+                    {
+                      "sha": "a48fe56ab29dfd30546be4333e70b01f070cb165",
+                      "parents": [
+                        "828380fd3ce82aa650f27dd8fc5ae227f7534c8e"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-05-13T01:15:41.000Z",
+                      "subject": "Extract components, hook, and utility from StudentWork"
+                    },
+                    {
+                      "sha": "828380fd3ce82aa650f27dd8fc5ae227f7534c8e",
+                      "parents": [
+                        "f5bc68691810469ac88e2035828dc731e5d417d8",
+                        "c4ac0c6d168a6708217352d5c5c629c68307c611"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-05-12T23:44:42.000Z",
+                      "subject": "Merge pull request #5 from dashi-ki/lesson-5"
+                    },
+                    {
+                      "sha": "c4ac0c6d168a6708217352d5c5c629c68307c611",
+                      "parents": [
+                        "f81b1375ed2e865229c8be4a8db6f4caf8b416ea"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-05-06T02:24:59.000Z",
+                      "subject": "add screenshot"
+                    },
+                    {
+                      "sha": "f81b1375ed2e865229c8be4a8db6f4caf8b416ea",
+                      "parents": [
+                        "47ecb960a922ff8d831aec9d78ed25c03b7e779f"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-05-06T02:17:08.000Z",
+                      "subject": "Update SnackForm.jsx"
+                    },
+                    {
+                      "sha": "47ecb960a922ff8d831aec9d78ed25c03b7e779f",
+                      "parents": [
+                        "f5bc68691810469ac88e2035828dc731e5d417d8"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-05-06T01:07:02.000Z",
+                      "subject": "complete part 1 instructions"
+                    },
+                    {
+                      "sha": "f5bc68691810469ac88e2035828dc731e5d417d8",
+                      "parents": [
+                        "f0ddd49e9cc8df6ebeb8e17ba67b51e494dbba54",
+                        "8517d4dd0ed40c40d62f299dc4a65c074d2b9c63"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-05-06T00:00:21.000Z",
+                      "subject": "Merge pull request #4 from dashi-ki/lesson-4"
+                    },
+                    {
+                      "sha": "8517d4dd0ed40c40d62f299dc4a65c074d2b9c63",
+                      "parents": [
+                        "f0ddd49e9cc8df6ebeb8e17ba67b51e494dbba54"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-04-29T01:53:14.000Z",
+                      "subject": "worked through lesson exercises"
+                    },
+                    {
+                      "sha": "f0ddd49e9cc8df6ebeb8e17ba67b51e494dbba54",
+                      "parents": [
+                        "fdf41e74251c16c9c73f59dfc1a1c7ca4a476570",
+                        "5c3453ea490ba69509b209874a050ac9b7d24fc5"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-04-29T00:40:03.000Z",
+                      "subject": "Merge pull request #3 from dashi-ki/lesson-3"
+                    },
+                    {
+                      "sha": "5c3453ea490ba69509b209874a050ac9b7d24fc5",
+                      "parents": [
+                        "fdf41e74251c16c9c73f59dfc1a1c7ca4a476570"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-04-22T02:52:32.000Z",
+                      "subject": "Fix lesson-03 React bugs and render components"
+                    },
+                    {
+                      "sha": "fdf41e74251c16c9c73f59dfc1a1c7ca4a476570",
+                      "parents": [
+                        "491595964b6b2b128161f349fc4d7c41d84b824f",
+                        "7839041b85d086c57b0015b2a9dedf71793398f4"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-04-17T18:51:52.000Z",
+                      "subject": "Merge pull request #2 from dashi-ki/lesson-2"
+                    },
+                    {
+                      "sha": "7839041b85d086c57b0015b2a9dedf71793398f4",
+                      "parents": [
+                        "491595964b6b2b128161f349fc4d7c41d84b824f"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-04-11T00:17:08.000Z",
+                      "subject": "Add Snack components and wire into studentWork"
+                    },
+                    {
+                      "sha": "491595964b6b2b128161f349fc4d7c41d84b824f",
+                      "parents": [
+                        "9b220ca6aeb50148925d762ba8d82cd07e23696c",
+                        "2f83934f537b0bdd2ea15179dc113e1fd590bcc2"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-04-10T18:15:22.000Z",
+                      "subject": "Merge pull request #1 from dashi-ki/lesson-1"
+                    },
+                    {
+                      "sha": "2f83934f537b0bdd2ea15179dc113e1fd590bcc2",
+                      "parents": [
+                        "8f285e9d7af775640971b12d9e689fb019a528b3"
+                      ],
+                      "login": "dashi-ki",
+                      "author": "dashi-ki",
+                      "date": "2026-04-05T22:14:41.000Z",
+                      "subject": "Update studentWork.jsx"
+                    }
+                  ],
+                  "partial": true,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/better-days-towing": {
+                  "repository": "jayanti-neu/better-days-towing",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "e2f33885bb326e4ffe52b284db67c647e54f9e2f",
+                      "parents": [
+                        "a0751433882d9981ea89d1f2e09f0ae33f4315aa"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-11-12T13:23:41.000Z",
+                      "subject": "Delete CNAME"
+                    },
+                    {
+                      "sha": "a0751433882d9981ea89d1f2e09f0ae33f4315aa",
+                      "parents": [
+                        "2f921eb38b96657d6dd8f99c22802037f40183f7"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-11-12T13:11:02.000Z",
+                      "subject": "Update CNAME"
+                    },
+                    {
+                      "sha": "2f921eb38b96657d6dd8f99c22802037f40183f7",
+                      "parents": [
+                        "0b1756302553ed803825f37c672c8b1122cd74c5"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-11-12T12:38:37.000Z",
+                      "subject": "Create CNAME"
+                    },
+                    {
+                      "sha": "0b1756302553ed803825f37c672c8b1122cd74c5",
+                      "parents": [],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-09-29T04:02:12.000Z",
+                      "subject": "basic setup"
+                    }
+                  ],
+                  "partial": false,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/clinic": {
+                  "repository": "jayanti-neu/clinic",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "49a0e874ac8a87a6ed843714287bf7ec4422b841",
+                      "parents": [
+                        "4f7255d98db98713e2744b2bfbc61cbf0800ddf0"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-06-27T20:55:25.000Z",
+                      "subject": "Fix: run init_db on all environments"
+                    },
+                    {
+                      "sha": "4f7255d98db98713e2744b2bfbc61cbf0800ddf0",
+                      "parents": [],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-06-27T20:35:38.000Z",
+                      "subject": "Initial deploy"
+                    }
+                  ],
+                  "partial": false,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/clinic-app": {
+                  "repository": "jayanti-neu/clinic-app",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "2f5de6ace52376e46e2f974e5acf3c979865894f",
+                      "parents": [
+                        "ac11d0f83bf9bb0f4bffd4a3e8a4d6825ed2c351"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-06-27T20:22:54.000Z",
+                      "subject": "fix: run init_db on all environments"
+                    },
+                    {
+                      "sha": "ac11d0f83bf9bb0f4bffd4a3e8a4d6825ed2c351",
+                      "parents": [],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-06-27T20:06:59.000Z",
+                      "subject": "Initial commit"
+                    }
+                  ],
+                  "partial": false,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/freight-tracker-frontend": {
+                  "repository": "jayanti-neu/freight-tracker-frontend",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "04cf221714da25b16dc8584b08597b37553f758d",
+                      "parents": [
+                        "1d123cc94ff55bd8e9b7ccdad7260e28339a3a3e"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-09-24T15:53:00.000Z",
+                      "subject": "updates tab title + socket link"
+                    },
+                    {
+                      "sha": "1d123cc94ff55bd8e9b7ccdad7260e28339a3a3e",
+                      "parents": [
+                        "8efe30c44dfe238433d120c459349fc5345aa838"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-09-22T03:50:27.000Z",
+                      "subject": "fix(routing): fallback to shipments page when shipment ID is invalid or not found"
+                    },
+                    {
+                      "sha": "8efe30c44dfe238433d120c459349fc5345aa838",
+                      "parents": [
+                        "3ca8f0b597d349effbb6051c067e1c3e0baf2848"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-09-22T03:09:44.000Z",
+                      "subject": "fix netlify react router issue"
+                    },
+                    {
+                      "sha": "3ca8f0b597d349effbb6051c067e1c3e0baf2848",
+                      "parents": [
+                        "d5296052d92c7840d92d890fdf219d5e01cd9da8"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-09-21T17:42:48.000Z",
+                      "subject": "changes from stadia to openstreetmaps"
+                    },
+                    {
+                      "sha": "d5296052d92c7840d92d890fdf219d5e01cd9da8",
+                      "parents": [
+                        "0617c3023cccba55755cf9de09b115611bba91df"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-09-21T17:07:07.000Z",
+                      "subject": "env file typo fix"
+                    },
+                    {
+                      "sha": "0617c3023cccba55755cf9de09b115611bba91df",
+                      "parents": [
+                        "4f3c0300985164688fe57690025fdb00eba83e1c"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-09-21T16:11:07.000Z",
+                      "subject": "updated env file"
+                    },
+                    {
+                      "sha": "4f3c0300985164688fe57690025fdb00eba83e1c",
+                      "parents": [
+                        "205b3ae2e3f0973e6e9a7612f2fa8e3e13dd4574"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-09-21T00:18:49.000Z",
+                      "subject": "UI update"
+                    },
+                    {
+                      "sha": "205b3ae2e3f0973e6e9a7612f2fa8e3e13dd4574",
+                      "parents": [
+                        "ebf34f33fa5ff88c97469eb2146a44e48c1e6224"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-08-26T01:09:04.000Z",
+                      "subject": "✅ Phase 3 Frontend: Debounced search, WebSocket live updates, MapDashboard with Leaflet, geocoding cache, and real-time reactivity"
+                    },
+                    {
+                      "sha": "ebf34f33fa5ff88c97469eb2146a44e48c1e6224",
+                      "parents": [
+                        "d67d61f867e7dad93d31d2676d2375f6d3b7d296"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-08-02T23:15:22.000Z",
+                      "subject": "Frontend Phase 2: Implemented CRUD pages with Zustand and basic Tailwind styling"
+                    },
+                    {
+                      "sha": "d67d61f867e7dad93d31d2676d2375f6d3b7d296",
+                      "parents": [],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-07-31T03:54:51.000Z",
+                      "subject": "Frontend Phase 1: Setup Vite + TypeScript + Tailwind with initial routing"
+                    }
+                  ],
+                  "partial": false,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/garrett-hidden": {
+                  "repository": "jayanti-neu/garrett-hidden",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "f6a917c9c9c9d42bb18cb00c5c0aedd3f0193163",
+                      "parents": [
+                        "6172febe08dd326d350bc20986af5e4fa537c6bb"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-17T05:47:03.000Z",
+                      "subject": "feat: add LocationList view with distance sorting"
+                    },
+                    {
+                      "sha": "6172febe08dd326d350bc20986af5e4fa537c6bb",
+                      "parents": [
+                        "66875bce373643a63639a95de6eccf0d5e8d32ed"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-17T05:45:04.000Z",
+                      "subject": "feat: add LocationDetail page and wire up Explore flow"
+                    },
+                    {
+                      "sha": "66875bce373643a63639a95de6eccf0d5e8d32ed",
+                      "parents": [
+                        "47d120edd335f4243ebbde29edb4f3997093a56b"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-17T02:25:34.000Z",
+                      "subject": "feat: add ProximityAlert banner component"
+                    },
+                    {
+                      "sha": "47d120edd335f4243ebbde29edb4f3997093a56b",
+                      "parents": [
+                        "5feb058660b838171abb5b3cf1d680889afd9163"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-16T03:11:32.000Z",
+                      "subject": "updated github for vercel"
+                    },
+                    {
+                      "sha": "5feb058660b838171abb5b3cf1d680889afd9163",
+                      "parents": [
+                        "62ad71f524abe99b71f14ca26779eebfb8a5328d"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-16T03:08:58.000Z",
+                      "subject": "config: add .npmrc for legacy peer deps"
+                    },
+                    {
+                      "sha": "62ad71f524abe99b71f14ca26779eebfb8a5328d",
+                      "parents": [
+                        "6767ddd52223e9d02858e905fbd68072f09c6b22"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-15T20:06:42.000Z",
+                      "subject": "feat: configure PWA manifest and service worker with offline caching"
+                    },
+                    {
+                      "sha": "6767ddd52223e9d02858e905fbd68072f09c6b22",
+                      "parents": [
+                        "4115a869fabaab0568d2342445c1ce7021768ba3"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-15T07:01:00.000Z",
+                      "subject": "feat: add useProximity hook and wire up proximity alerts in App"
+                    },
+                    {
+                      "sha": "4115a869fabaab0568d2342445c1ce7021768ba3",
+                      "parents": [
+                        "e92685437e4022a105c61faf1d48620751954594"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-15T06:57:13.000Z",
+                      "subject": "feat: add GPS status indicator"
+                    },
+                    {
+                      "sha": "e92685437e4022a105c61faf1d48620751954594",
+                      "parents": [
+                        "8be22583b29ae895c74fdb49da38e03c59f038bf"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-15T06:55:36.000Z",
+                      "subject": "feat: show user GPS position as blue dot on map"
+                    },
+                    {
+                      "sha": "8be22583b29ae895c74fdb49da38e03c59f038bf",
+                      "parents": [
+                        "58a5fd1629e0598665750fe09eb68c8467c85c04"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-14T18:36:33.000Z",
+                      "subject": "feat: render location pins on map by category color"
+                    },
+                    {
+                      "sha": "58a5fd1629e0598665750fe09eb68c8467c85c04",
+                      "parents": [
+                        "2bbc9d283ed65ef97ca241401711accfbeebb521"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-14T18:35:20.000Z",
+                      "subject": "feat: add Leaflet map centered on Garrett County"
+                    },
+                    {
+                      "sha": "2bbc9d283ed65ef97ca241401711accfbeebb521",
+                      "parents": [
+                        "fc73592b19f3c524338602d7de42214db22f1ca3"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-14T18:33:00.000Z",
+                      "subject": "hooks: add useGeolocation hook"
+                    },
+                    {
+                      "sha": "fc73592b19f3c524338602d7de42214db22f1ca3",
+                      "parents": [
+                        "cb6406591013fb2df6c258ef7736ee610a1e5280"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-14T11:55:02.000Z",
+                      "subject": "utils: add geo utility functions and haversine formula"
+                    },
+                    {
+                      "sha": "cb6406591013fb2df6c258ef7736ee610a1e5280",
+                      "parents": [
+                        "9568fdea5251f9c6db84dc1e9cee684b18dbde5b"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-14T11:52:48.000Z",
+                      "subject": "data: add locations.json with 3 seed locations"
+                    },
+                    {
+                      "sha": "9568fdea5251f9c6db84dc1e9cee684b18dbde5b",
+                      "parents": [],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-14T11:46:16.000Z",
+                      "subject": "scaffold: Vite + React + Tailwind + folder structure + categories data"
+                    }
+                  ],
+                  "partial": false,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/holy-tongue": {
+                  "repository": "jayanti-neu/holy-tongue",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "298eddebe395fbbaa9e5cbd2f76fc680a594c7ce",
+                      "parents": [
+                        "61765ad848368f80c6c4df948eeff7c4835623bd"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-04-12T20:25:18.000Z",
+                      "subject": "cleanup and updating readme"
+                    },
+                    {
+                      "sha": "61765ad848368f80c6c4df948eeff7c4835623bd",
+                      "parents": [
+                        "e19719680bd9b06dfb058e9a8b9df70d34d18039"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-04-12T20:03:37.000Z",
+                      "subject": "psalms data for stage 1"
+                    },
+                    {
+                      "sha": "e19719680bd9b06dfb058e9a8b9df70d34d18039",
+                      "parents": [],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-04-12T16:26:34.000Z",
+                      "subject": "initial setup with stage 1 data and test suite"
+                    }
+                  ],
+                  "partial": false,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/household-partners": {
+                  "repository": "jayanti-neu/household-partners",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "e6000545d6f79039a500b2b28c1a750c60b7ee0f",
+                      "parents": [],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2026-04-23T01:19:44.000Z",
+                      "subject": "initial commit"
+                    }
+                  ],
+                  "partial": false,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/inventory-management": {
+                  "repository": "jayanti-neu/inventory-management",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "9be62a7bffaa71f9974cd156994e8a1285c9061b",
+                      "parents": [
+                        "663fac919de276ef1a9a9352929df10d1707079c"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-05-28T01:47:17.000Z",
+                      "subject": "script fixes & nodemon"
+                    },
+                    {
+                      "sha": "663fac919de276ef1a9a9352929df10d1707079c",
+                      "parents": [
+                        "25e0f409f1d132993527c2b9b0da85d9f4c83b0d"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2025-05-28T01:24:11.000Z",
+                      "subject": "Add package.json with scripts for concurrent server and client startup"
+                    },
+                    {
+                      "sha": "25e0f409f1d132993527c2b9b0da85d9f4c83b0d",
+                      "parents": [
+                        "82ee66fd06c9a85c80eab1ab1258a4cddeaffeb4"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-05-28T01:12:14.000Z",
+                      "subject": "frontend init"
+                    },
+                    {
+                      "sha": "82ee66fd06c9a85c80eab1ab1258a4cddeaffeb4",
+                      "parents": [
+                        "29cc07bb2bf3a0b79488ad569256d00551635fa7"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-05-28T01:06:59.000Z",
+                      "subject": "backend init"
+                    },
+                    {
+                      "sha": "29cc07bb2bf3a0b79488ad569256d00551635fa7",
+                      "parents": [],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2025-05-28T00:59:02.000Z",
+                      "subject": "first commit"
+                    }
+                  ],
+                  "partial": false,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/jayanti-neu": {
+                  "repository": "jayanti-neu/jayanti-neu",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "56f183c6cc95bf37dfc5f2f0280f67898bd1f207",
+                      "parents": [
+                        "503f4c517fa3e21794b00e9ea64ed2cf3a92f5f4"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-09-26T23:21:53.000Z",
+                      "subject": "Update README.md with GitHub Constellation"
+                    },
+                    {
+                      "sha": "503f4c517fa3e21794b00e9ea64ed2cf3a92f5f4",
+                      "parents": [
+                        "9a891f349c7c3617663486bb756de14ddd7a5f40"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-09-26T23:20:05.000Z",
+                      "subject": "Add daily constellation generation workflow"
+                    },
+                    {
+                      "sha": "9a891f349c7c3617663486bb756de14ddd7a5f40",
+                      "parents": [],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-09-26T23:17:52.000Z",
+                      "subject": "Initial commit"
+                    }
+                  ],
+                  "partial": false,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/lantern-starter": {
+                  "repository": "jayanti-neu/lantern-starter",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "b0d96e9d44b9d5e49346225be09ae6f14ba78ecb",
+                      "parents": [],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-30T11:51:44.000Z",
+                      "subject": "initial template created for ticket 1.1"
+                    }
+                  ],
+                  "partial": false,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/new-tehillim": {
+                  "repository": "jayanti-neu/new-tehillim",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "7750f7cc8a4f906939ef9b6aa780e06838508e42",
+                      "parents": [
+                        "1747d951cf853a3fddf393d68c999bc38ea6769e"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-21T04:32:17.000Z",
+                      "subject": "index added"
+                    },
+                    {
+                      "sha": "1747d951cf853a3fddf393d68c999bc38ea6769e",
+                      "parents": [],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-21T04:30:53.000Z",
+                      "subject": "Initial commit"
+                    }
+                  ],
+                  "partial": false,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/node-homework": {
+                  "repository": "jayanti-neu/node-homework",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "4b774c5aac699fe682fc4f4b21fabf5f456c2afe",
+                      "parents": [
+                        "5b009f07c82b2cc7791c7234216e2200905ba5ce",
+                        "e25ae799f3687ffa247d60ab937b3cf070e62b9f"
+                      ],
+                      "login": "GinaCastromonte",
+                      "author": "GinaCastromonte",
+                      "date": "2026-03-06T19:09:45.000Z",
+                      "subject": "Merge pull request #64 from mxmason/ej/chore/fix-lockfile"
+                    },
+                    {
+                      "sha": "5b009f07c82b2cc7791c7234216e2200905ba5ce",
+                      "parents": [
+                        "f54ef53b484495916cd6dc1f18a31f8f9d1ad254",
+                        "8eccb758e61f71f7f69b230ca8231ff7aeefab92"
+                      ],
+                      "login": "GinaCastromonte",
+                      "author": "GinaCastromonte",
+                      "date": "2026-03-06T19:09:07.000Z",
+                      "subject": "Merge pull request #63 from Code-the-Dream-School/week0-readme-postgress-windows-installation"
+                    },
+                    {
+                      "sha": "f54ef53b484495916cd6dc1f18a31f8f9d1ad254",
+                      "parents": [
+                        "dd28e320f3049db02d07c890a3e0d6dc3d8393f1",
+                        "d2198506500944a47d021c9c42296ae70f093266"
+                      ],
+                      "login": "GinaCastromonte",
+                      "author": "GinaCastromonte",
+                      "date": "2026-03-06T19:08:07.000Z",
+                      "subject": "Merge pull request #65 from mxmason/ej/fix/fix-test-script"
+                    },
+                    {
+                      "sha": "d2198506500944a47d021c9c42296ae70f093266",
+                      "parents": [
+                        "dd28e320f3049db02d07c890a3e0d6dc3d8393f1"
+                      ],
+                      "login": "mxmason",
+                      "author": "mxmason",
+                      "date": "2026-03-05T05:35:22.000Z",
+                      "subject": "fix: ensure stricter matching for test script"
+                    },
+                    {
+                      "sha": "e25ae799f3687ffa247d60ab937b3cf070e62b9f",
+                      "parents": [
+                        "dd28e320f3049db02d07c890a3e0d6dc3d8393f1"
+                      ],
+                      "login": "mxmason",
+                      "author": "mxmason",
+                      "date": "2026-03-05T00:50:51.000Z",
+                      "subject": "chore(deps): recreate lockfile to fix sync errors"
+                    },
+                    {
+                      "sha": "8eccb758e61f71f7f69b230ca8231ff7aeefab92",
+                      "parents": [
+                        "0f38c23bc5ceb6a44ffd9ac623a740d19661e8b9"
+                      ],
+                      "login": "akhhanna20",
+                      "author": "akhhanna20",
+                      "date": "2026-02-18T00:14:21.000Z",
+                      "subject": "Added space"
+                    },
+                    {
+                      "sha": "0f38c23bc5ceb6a44ffd9ac623a740d19661e8b9",
+                      "parents": [
+                        "71a91e4447feeca76b63f39d7604d8bbe83015d8"
+                      ],
+                      "login": "akhhanna20",
+                      "author": "akhhanna20",
+                      "date": "2026-02-18T00:10:38.000Z",
+                      "subject": "Fixed several typos"
+                    },
+                    {
+                      "sha": "71a91e4447feeca76b63f39d7604d8bbe83015d8",
+                      "parents": [
+                        "3508787eae901706da7d78170b958beaed250202"
+                      ],
+                      "login": "akhhanna20",
+                      "author": "akhhanna20",
+                      "date": "2026-02-18T00:01:37.000Z",
+                      "subject": "Fixed typos"
+                    },
+                    {
+                      "sha": "3508787eae901706da7d78170b958beaed250202",
+                      "parents": [
+                        "dd28e320f3049db02d07c890a3e0d6dc3d8393f1"
+                      ],
+                      "login": "akhhanna20",
+                      "author": "akhhanna20",
+                      "date": "2026-02-17T18:57:08.000Z",
+                      "subject": "First commit with fixes for installation postgress for Windows"
+                    },
+                    {
+                      "sha": "dd28e320f3049db02d07c890a3e0d6dc3d8393f1",
+                      "parents": [
+                        "599599381fcbcfeb016efb0e597b97b8a0b805db",
+                        "db2d2ecf85fc8c9e4d45a6f1520f33bffa4c401b"
+                      ],
+                      "login": "jrmcgarvey",
+                      "author": "jrmcgarvey",
+                      "date": "2026-01-24T19:59:53.000Z",
+                      "subject": "Merge pull request #62 from Code-the-Dream-School/correct-tdd9-numbering"
+                    },
+                    {
+                      "sha": "db2d2ecf85fc8c9e4d45a6f1520f33bffa4c401b",
+                      "parents": [
+                        "599599381fcbcfeb016efb0e597b97b8a0b805db"
+                      ],
+                      "login": "jrmcgarvey",
+                      "author": "jrmcgarvey",
+                      "date": "2026-01-24T16:00:00.000Z",
+                      "subject": "correct lesson 9 TDD reporter numbering"
+                    },
+                    {
+                      "sha": "599599381fcbcfeb016efb0e597b97b8a0b805db",
+                      "parents": [
+                        "c754a6befc4fd57af505f9e798803786fa82f80f",
+                        "7c8c57d1e743fb6c44ee36ab5a3c5f2d1e85964a"
+                      ],
+                      "login": "jrmcgarvey",
+                      "author": "jrmcgarvey",
+                      "date": "2026-01-20T04:35:38.000Z",
+                      "subject": "Merge pull request #61 from Code-the-Dream-School/fix-9tdd"
+                    },
+                    {
+                      "sha": "7c8c57d1e743fb6c44ee36ab5a3c5f2d1e85964a",
+                      "parents": [
+                        "c754a6befc4fd57af505f9e798803786fa82f80f"
+                      ],
+                      "login": "jrmcgarvey",
+                      "author": "jrmcgarvey",
+                      "date": "2026-01-19T23:44:01.000Z",
+                      "subject": "correct package.json script for assignment9 tdd"
+                    },
+                    {
+                      "sha": "c754a6befc4fd57af505f9e798803786fa82f80f",
+                      "parents": [
+                        "fba9c99cb992c2dd34faf991a092025abadd6a54",
+                        "f0209fd4a0b7fc5f61e4caf00bcad2b54db260ec"
+                      ],
+                      "login": "jrmcgarvey",
+                      "author": "jrmcgarvey",
+                      "date": "2026-01-05T05:16:56.000Z",
+                      "subject": "Merge pull request #55 from Code-the-Dream-School/fix-assignment10-tdd"
+                    },
+                    {
+                      "sha": "fba9c99cb992c2dd34faf991a092025abadd6a54",
+                      "parents": [
+                        "1e5742bbf5f63ec2008cfb5946eebf47126e9dea",
+                        "63ed945afe1e7667d8a84a5da2b42e24ef5ce9c4"
+                      ],
+                      "login": "jrmcgarvey",
+                      "author": "jrmcgarvey",
+                      "date": "2026-01-05T05:16:17.000Z",
+                      "subject": "Merge pull request #49 from Code-the-Dream-School/fix-assignment8-tdd"
+                    },
+                    {
+                      "sha": "1e5742bbf5f63ec2008cfb5946eebf47126e9dea",
+                      "parents": [
+                        "d3256a6b0d0b0c9c84943f8f842517cea1ab8630",
+                        "a73c6e7a70db13e61e66217ccb26764b7c14d109"
+                      ],
+                      "login": "jrmcgarvey",
+                      "author": "jrmcgarvey",
+                      "date": "2025-12-26T20:45:47.000Z",
+                      "subject": "Merge pull request #60 from Code-the-Dream-School/readme-correction-dbases"
+                    },
+                    {
+                      "sha": "a73c6e7a70db13e61e66217ccb26764b7c14d109",
+                      "parents": [
+                        "d3256a6b0d0b0c9c84943f8f842517cea1ab8630"
+                      ],
+                      "login": "jrmcgarvey",
+                      "author": "jrmcgarvey",
+                      "date": "2025-12-26T15:46:22.000Z",
+                      "subject": "fix database name instructions"
+                    },
+                    {
+                      "sha": "d3256a6b0d0b0c9c84943f8f842517cea1ab8630",
+                      "parents": [
+                        "3e93acfbb6b30c1b2d04641773cf3789d9a23c64",
+                        "82bb66dd51ca6210f94382351c984c4c207ff2b3"
+                      ],
+                      "login": "jrmcgarvey",
+                      "author": "jrmcgarvey",
+                      "date": "2025-12-22T21:25:56.000Z",
+                      "subject": "Merge pull request #53 from Code-the-Dream-School/adjustments"
+                    },
+                    {
+                      "sha": "63ed945afe1e7667d8a84a5da2b42e24ef5ce9c4",
+                      "parents": [
+                        "d0636433d1e4e7f62526eff65679c9394c90e246",
+                        "3e93acfbb6b30c1b2d04641773cf3789d9a23c64"
+                      ],
+                      "login": "jrmcgarvey",
+                      "author": "jrmcgarvey",
+                      "date": "2025-12-21T01:56:57.000Z",
+                      "subject": "completed merge of main"
+                    },
+                    {
+                      "sha": "f0209fd4a0b7fc5f61e4caf00bcad2b54db260ec",
+                      "parents": [
+                        "3e93acfbb6b30c1b2d04641773cf3789d9a23c64"
+                      ],
+                      "login": "jrmcgarvey",
+                      "author": "jrmcgarvey",
+                      "date": "2025-12-20T15:35:41.000Z",
+                      "subject": "correction to assignment10 tdd"
+                    },
+                    {
+                      "sha": "3e93acfbb6b30c1b2d04641773cf3789d9a23c64",
+                      "parents": [
+                        "7c366e600a4029d65b95deee3a3bc037be0d4bc2",
+                        "dbfe7316261d58dce002fb4a7197e9199dbe8c5d"
+                      ],
+                      "login": "jrmcgarvey",
+                      "author": "jrmcgarvey",
+                      "date": "2025-12-18T22:49:09.000Z",
+                      "subject": "Merge pull request #52 from Code-the-Dream-School/add-assignment10-tdd"
+                    },
+                    {
+                      "sha": "82bb66dd51ca6210f94382351c984c4c207ff2b3",
+                      "parents": [
+                        "10ca81996c12202b31845b41fdf3abe26d7e05b6"
+                      ],
+                      "login": "GinaCastromonte",
+                      "author": "GinaCastromonte",
+                      "date": "2025-12-18T18:44:35.000Z",
+                      "subject": "updated tdd according to updates"
+                    },
+                    {
+                      "sha": "7c366e600a4029d65b95deee3a3bc037be0d4bc2",
+                      "parents": [
+                        "f862b2857848afd3e0c51654e6e0092fc1e4b535",
+                        "f7158a08e71039af2e085f2d155b1e00e29914a5"
+                      ],
+                      "login": "jrmcgarvey",
+                      "author": "jrmcgarvey",
+                      "date": "2025-12-15T02:01:38.000Z",
+                      "subject": "Merge pull request #51 from Code-the-Dream-School/fix-assignment-9-tdd-1210"
+                    },
+                    {
+                      "sha": "f862b2857848afd3e0c51654e6e0092fc1e4b535",
+                      "parents": [
+                        "2d89aa22ee253e224792fffdf2574507681d7dea",
+                        "01bde3dd3ab6f574a3b1370b7ca570a5af376ebf"
+                      ],
+                      "login": "jrmcgarvey",
+                      "author": "jrmcgarvey",
+                      "date": "2025-12-15T02:01:09.000Z",
+                      "subject": "Merge pull request #48 from Code-the-Dream-School/bulk-load-utility"
+                    }
+                  ],
+                  "partial": true,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/nu-finish-site": {
+                  "repository": "jayanti-neu/nu-finish-site",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "82a910bbd6e2904dbec951d4c1e8b1e652e04a74",
+                      "parents": [
+                        "1a93a9ea707beec761cb33139fbbdbefa55cb78c",
+                        "3cacc031c34315144dd1e6fb69643eb753f23300"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-08-02T22:23:02.000Z",
+                      "subject": "Merge pull request #1 from jayanti-neu/development"
+                    },
+                    {
+                      "sha": "3cacc031c34315144dd1e6fb69643eb753f23300",
+                      "parents": [
+                        "eacd6a1b305a81fc4ca0ac4d33e5c57e6e766bf4"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-08-02T19:49:30.000Z",
+                      "subject": "Fix PR review comments: non-standard opacity values, passive scroll, sharp dep, README"
+                    },
+                    {
+                      "sha": "eacd6a1b305a81fc4ca0ac4d33e5c57e6e766bf4",
+                      "parents": [
+                        "c0fec5036c6863b7b4cdf99c1fed93feb8c96785"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2026-08-02T19:34:12.000Z",
+                      "subject": "Replace SVG favicon with PNG, update SprayGunIcon to use image, and remove unused files"
+                    },
+                    {
+                      "sha": "c0fec5036c6863b7b4cdf99c1fed93feb8c96785",
+                      "parents": [
+                        "1a93a9ea707beec761cb33139fbbdbefa55cb78c"
+                      ],
+                      "login": "mnichols08",
+                      "author": "mnichols08",
+                      "date": "2026-08-02T15:07:12.000Z",
+                      "subject": "Enhance styles with new animations, dark mode support, and improved motion effects in index.css"
+                    },
+                    {
+                      "sha": "1a93a9ea707beec761cb33139fbbdbefa55cb78c",
+                      "parents": [
+                        "c7bf962c90ee913fa536136aeb4a81bc72c9e13e"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-07-05T20:02:01.000Z",
+                      "subject": "Refine hero, favicon, palette, and remove tracker section"
+                    },
+                    {
+                      "sha": "c7bf962c90ee913fa536136aeb4a81bc72c9e13e",
+                      "parents": [
+                        "90788a766a2446894c116228b71f66bf6ba75571"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-07-05T19:30:16.000Z",
+                      "subject": "Rebrand to Nu Finish Collision Center with client-requested updates"
+                    },
+                    {
+                      "sha": "90788a766a2446894c116228b71f66bf6ba75571",
+                      "parents": [],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-08T03:54:54.000Z",
+                      "subject": "Initial commit"
+                    }
+                  ],
+                  "partial": false,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/psalms-transliterated": {
+                  "repository": "jayanti-neu/psalms-transliterated",
+                  "branch": "master",
+                  "commits": [
+                    {
+                      "sha": "9be5363c1a05d263c4a0eeba9ba980012a4e9b4f",
+                      "parents": [
+                        "5b3488644fe4c63b3d9f3e80dcccf62c52e0cd86"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-07-07T12:40:55.000Z",
+                      "subject": "Add Ana BeKoach prayer and refine the reader"
+                    },
+                    {
+                      "sha": "5b3488644fe4c63b3d9f3e80dcccf62c52e0cd86",
+                      "parents": [
+                        "5a069850948f67f8abaa7aecbc2ab6789977ed2c"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-07-07T12:40:36.000Z",
+                      "subject": "Update local Claude Code permission allowlist"
+                    },
+                    {
+                      "sha": "5a069850948f67f8abaa7aecbc2ab6789977ed2c",
+                      "parents": [
+                        "03d4eae86d051ec11ad4b76bfc41065a73a3c98e"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-29T14:41:04.000Z",
+                      "subject": "build-api: split maqaf-joined words into separate units"
+                    },
+                    {
+                      "sha": "03d4eae86d051ec11ad4b76bfc41065a73a3c98e",
+                      "parents": [
+                        "4adb47095206639baed94f79dd673421d16aec52"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-29T14:09:14.000Z",
+                      "subject": "ci: trigger Pages deploy for lemma index"
+                    },
+                    {
+                      "sha": "4adb47095206639baed94f79dd673421d16aec52",
+                      "parents": [
+                        "d9fcb3b5e5976edceeacfb3d79f3e49ef0bf1f02"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-29T14:02:59.000Z",
+                      "subject": "build-api: emit lemma occurrence index for \"related occurrences\""
+                    },
+                    {
+                      "sha": "d9fcb3b5e5976edceeacfb3d79f3e49ef0bf1f02",
+                      "parents": [
+                        "7c2589eb5be4a450a7a1aac82988490dc3b9b92a"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-28T00:45:03.000Z",
+                      "subject": "Pre-render per-psalm static pages for SEO"
+                    },
+                    {
+                      "sha": "7c2589eb5be4a450a7a1aac82988490dc3b9b92a",
+                      "parents": [
+                        "e39976d27c7f5bc4ab80d24d644ab7ac847c83ea"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-27T18:37:31.000Z",
+                      "subject": "Bind dev and preview servers to localhost for Google sign-in"
+                    },
+                    {
+                      "sha": "e39976d27c7f5bc4ab80d24d644ab7ac847c83ea",
+                      "parents": [
+                        "98b257b4fe80e0c98454a587bb3754b802ca4895"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-27T18:34:28.000Z",
+                      "subject": "Add daily and weekly Tehilim reading schedules"
+                    },
+                    {
+                      "sha": "98b257b4fe80e0c98454a587bb3754b802ca4895",
+                      "parents": [
+                        "6809ef67999cea46b12a56ed82e4f2000f05ec14"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-27T18:32:41.000Z",
+                      "subject": "Add PWA support with installable manifest and offline caching"
+                    },
+                    {
+                      "sha": "6809ef67999cea46b12a56ed82e4f2000f05ec14",
+                      "parents": [
+                        "942e3cba19d48a213e2ce9cb0b4b1453441cab33"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-27T18:28:00.000Z",
+                      "subject": "Update local Claude Code settings and permissions"
+                    },
+                    {
+                      "sha": "942e3cba19d48a213e2ce9cb0b4b1453441cab33",
+                      "parents": [
+                        "8b3094d19e0b42abfc4c430edbb31b92beffbd45"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-27T13:43:42.000Z",
+                      "subject": "build-api: include OSHB morph code per word part"
+                    },
+                    {
+                      "sha": "8b3094d19e0b42abfc4c430edbb31b92beffbd45",
+                      "parents": [
+                        "2d46529905f433a27ecbc9313fd53a9827f7f4c4"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-26T20:58:31.000Z",
+                      "subject": "build-api: fix stripCantillation eating niqqud vowels"
+                    },
+                    {
+                      "sha": "2d46529905f433a27ecbc9313fd53a9827f7f4c4",
+                      "parents": [
+                        "220ed190a68462f1cd81e35db51e83b7fb8fbdd4"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-26T18:54:29.000Z",
+                      "subject": "build-api: bake readable transliteration into the API"
+                    },
+                    {
+                      "sha": "220ed190a68462f1cd81e35db51e83b7fb8fbdd4",
+                      "parents": [
+                        "1072df1a70cc43497c274b0a3759ce58c22fbf83"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-26T18:37:09.000Z",
+                      "subject": "build-api: include per-word morphology (parts, lemma, pos)"
+                    },
+                    {
+                      "sha": "1072df1a70cc43497c274b0a3759ce58c22fbf83",
+                      "parents": [
+                        "bb883d741ab7025284c46f2a5e223ea2ec7d3846"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-26T14:46:26.000Z",
+                      "subject": "Add per-psalm JSON API for external consumers"
+                    },
+                    {
+                      "sha": "bb883d741ab7025284c46f2a5e223ea2ec7d3846",
+                      "parents": [
+                        "89dfbb60f9555a1e568a6b6241cbb7074425cfaa"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-24T01:59:59.000Z",
+                      "subject": "Consolidate verse controls into one row"
+                    },
+                    {
+                      "sha": "89dfbb60f9555a1e568a6b6241cbb7074425cfaa",
+                      "parents": [
+                        "a4fdebbe07c3233b50d8813a8d5d558585514af8"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-23T15:58:27.000Z",
+                      "subject": "Surface Firestore sync errors in the UI"
+                    },
+                    {
+                      "sha": "a4fdebbe07c3233b50d8813a8d5d558585514af8",
+                      "parents": [
+                        "f7c97782d7db71a727dbcb5ca8a175b1125eea38"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-23T15:48:51.000Z",
+                      "subject": "Add Google sign-in with cross-device favorites/notes sync"
+                    },
+                    {
+                      "sha": "f7c97782d7db71a727dbcb5ca8a175b1125eea38",
+                      "parents": [
+                        "4fd67568f872e416cc8a5b3d1effa099c4def4a2"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-22T03:24:49.000Z",
+                      "subject": "Add verse notes and bundled Rashi/Steinsaltz commentary; remove guide"
+                    },
+                    {
+                      "sha": "4fd67568f872e416cc8a5b3d1effa099c4def4a2",
+                      "parents": [
+                        "c99ca4f9a8ad6fd3875a10a768a52cdf49634e1b"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-02T01:26:44.000Z",
+                      "subject": "Hide verse translation until its number is clicked"
+                    },
+                    {
+                      "sha": "c99ca4f9a8ad6fd3875a10a768a52cdf49634e1b",
+                      "parents": [
+                        "ab4a6d1360ad545ef53f52f2128c11502329a2f5"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-02T01:23:43.000Z",
+                      "subject": "Remove learning hub, word study page, and per-word check marks"
+                    },
+                    {
+                      "sha": "ab4a6d1360ad545ef53f52f2128c11502329a2f5",
+                      "parents": [
+                        "9d6f4b078ff15f81909f3e311f7103178d59136e"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-02T01:18:01.000Z",
+                      "subject": "Widen gap between maqef-joined transliteration words"
+                    },
+                    {
+                      "sha": "9d6f4b078ff15f81909f3e311f7103178d59136e",
+                      "parents": [
+                        "add72a51d506d540ab1aa69660076d47c7893bfe"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-02T01:09:49.000Z",
+                      "subject": "Scroll to top on navigation; fix maqef/prefix transliteration joins"
+                    },
+                    {
+                      "sha": "add72a51d506d540ab1aa69660076d47c7893bfe",
+                      "parents": [
+                        "2876cddda5b5212601a3c67e71aee4dff116e9b0"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-06-01T16:00:46.000Z",
+                      "subject": "Add learning hub, Phase 1 lessons, and word progress tracking"
+                    }
+                  ],
+                  "partial": true,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/tehillim": {
+                  "repository": "jayanti-neu/tehillim",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "93ac0a357f6bb5a86c271fb3a3e53f95181ca9f5",
+                      "parents": [
+                        "7d33d0c0d0b1a2f6788384a4cc423d3afe9c0696"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-08T06:07:24.000Z",
+                      "subject": "initial commit"
+                    },
+                    {
+                      "sha": "7d33d0c0d0b1a2f6788384a4cc423d3afe9c0696",
+                      "parents": [],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-08T06:06:24.000Z",
+                      "subject": "Initial commit"
+                    }
+                  ],
+                  "partial": false,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/test-deploy-ctd": {
+                  "repository": "jayanti-neu/test-deploy-ctd",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "4051ea45645ec6bd2643015b87766afe35b7fe57",
+                      "parents": [
+                        "68403ea572969140628b60f74afb63141be655fe"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-06-04T21:43:44.000Z",
+                      "subject": "assignment10:implement recaptcha bot verification logic in user registration"
+                    },
+                    {
+                      "sha": "68403ea572969140628b60f74afb63141be655fe",
+                      "parents": [
+                        "82290248ea18911da0ec240bd958bc297c17d238"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-06-04T19:08:30.000Z",
+                      "subject": "assignment10: Refactor: increase express json payload limit to 1mb for recaptcha"
+                    },
+                    {
+                      "sha": "82290248ea18911da0ec240bd958bc297c17d238",
+                      "parents": [
+                        "3230191f054bfc4bdc29e745d49280a4825e983c",
+                        "2b4af8da875ac78457b9c3a999f6ec3f61bd5787"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-06-03T23:06:38.000Z",
+                      "subject": "Merge pull request #9 from BytesOfStrength/assignment9"
+                    },
+                    {
+                      "sha": "2b4af8da875ac78457b9c3a999f6ec3f61bd5787",
+                      "parents": [
+                        "f77d72869f42d458a648a63d451adc1e573360fc"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-06-01T22:47:56.000Z",
+                      "subject": "assignment9: Refactor test files for validation testing validation.test.js"
+                    },
+                    {
+                      "sha": "f77d72869f42d458a648a63d451adc1e573360fc",
+                      "parents": [
+                        "c2dd286d42939d5ed897defe006beee69e2bcf78"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-06-01T00:58:07.000Z",
+                      "subject": "assignment9: Add user network operation tests using supertest agent"
+                    },
+                    {
+                      "sha": "c2dd286d42939d5ed897defe006beee69e2bcf78",
+                      "parents": [
+                        "696ca1e10f18140d15b6eff3cba6cfedf284e1ba"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-06-01T00:39:04.000Z",
+                      "subject": "assignment9: Add automated testing for user controller unit tests and jwt middleware validations"
+                    },
+                    {
+                      "sha": "696ca1e10f18140d15b6eff3cba6cfedf284e1ba",
+                      "parents": [
+                        "5cf94e13762e36e1652e13f84c23ac637f2e48ca"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-06-01T00:21:35.000Z",
+                      "subject": "assignment9: Add automated test for testing updating and deleting tasks as well as write-access control, refactor taskController.js"
+                    },
+                    {
+                      "sha": "5cf94e13762e36e1652e13f84c23ac637f2e48ca",
+                      "parents": [
+                        "2517f5aba435087bb945cb6a01aaa5cafceae9bd"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-31T23:56:59.000Z",
+                      "subject": "assignment9: Add automated  task retrieval and access control tests (20-27)"
+                    },
+                    {
+                      "sha": "2517f5aba435087bb945cb6a01aaa5cafceae9bd",
+                      "parents": [
+                        "e94392556dd796ec8df4bc7159a615b59d1921be"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-30T23:19:44.000Z",
+                      "subject": "assignment9:Complete taskController creation tests"
+                    },
+                    {
+                      "sha": "e94392556dd796ec8df4bc7159a615b59d1921be",
+                      "parents": [
+                        "c71610375baf8dc35ba8ad4c5e2f63607157e57f"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-30T23:13:27.000Z",
+                      "subject": "assignment9: Created automated validation tests"
+                    },
+                    {
+                      "sha": "c71610375baf8dc35ba8ad4c5e2f63607157e57f",
+                      "parents": [
+                        "3230191f054bfc4bdc29e745d49280a4825e983c"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-29T20:41:30.000Z",
+                      "subject": "assignment9: Setup dev dependencies and environment for tests"
+                    },
+                    {
+                      "sha": "3230191f054bfc4bdc29e745d49280a4825e983c",
+                      "parents": [
+                        "7ab7d5457d7c802f951d01d6ffe504eb7f951eff",
+                        "4e606ef3602adcea85bee897dff001bf83b18de7"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-26T20:15:24.000Z",
+                      "subject": "Merge pull request #8 from BytesOfStrength/assignment8"
+                    },
+                    {
+                      "sha": "4e606ef3602adcea85bee897dff001bf83b18de7",
+                      "parents": [
+                        "d56e58ad6113490793247088c8809c5b71ea2671"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-26T20:08:24.000Z",
+                      "subject": "assignment8:Refactor analyticsRoutes to remove extra middleware"
+                    },
+                    {
+                      "sha": "d56e58ad6113490793247088c8809c5b71ea2671",
+                      "parents": [
+                        "535331e6a8d722eabebdf18fe878196bc0ffad0b"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-26T00:39:27.000Z",
+                      "subject": "assignment8: Remove auth.js"
+                    },
+                    {
+                      "sha": "535331e6a8d722eabebdf18fe878196bc0ffad0b",
+                      "parents": [
+                        "87387807a5deb4bc57263a18e0b1e4b3ada18719"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-24T21:58:13.000Z",
+                      "subject": "assignment8: refactor(auth.js) migrate jwtMiddleware to app.js and sync routes/controllers"
+                    },
+                    {
+                      "sha": "87387807a5deb4bc57263a18e0b1e4b3ada18719",
+                      "parents": [
+                        "ba91870c75eebc3f4092c8b784fb806487bd62f6"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-24T20:05:08.000Z",
+                      "subject": "assignment8: Set cookie in userController.js, replace auth.js middleware with jwtMiddleware.js"
+                    },
+                    {
+                      "sha": "ba91870c75eebc3f4092c8b784fb806487bd62f6",
+                      "parents": [
+                        "7ab7d5457d7c802f951d01d6ffe504eb7f951eff"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-24T19:25:45.000Z",
+                      "subject": "assignment8: Install packages for security and JWT authentication"
+                    },
+                    {
+                      "sha": "7ab7d5457d7c802f951d01d6ffe504eb7f951eff",
+                      "parents": [
+                        "f82193ca13d762703c9d6ccbea2e52a8a0ac0fc5",
+                        "2a358f674b5ca733585d77783b3380fc126b0bdb"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-20T15:45:28.000Z",
+                      "subject": "Merge pull request #7 from BytesOfStrength/assignment7"
+                    },
+                    {
+                      "sha": "2a358f674b5ca733585d77783b3380fc126b0bdb",
+                      "parents": [
+                        "19fbf15c356a6058dfc2745c8e9b74ad4c90e5c9"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-19T21:51:59.000Z",
+                      "subject": "assignment7: Fix typos in analyticsSchema,taskSchema, taskController, and re-add validation statement for analyicsController.js"
+                    },
+                    {
+                      "sha": "19fbf15c356a6058dfc2745c8e9b74ad4c90e5c9",
+                      "parents": [
+                        "04fc749b689cbd44500a5995231bc28338b7e266"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-16T23:03:16.000Z",
+                      "subject": "assignment7:Add error simulation for database operation"
+                    },
+                    {
+                      "sha": "04fc749b689cbd44500a5995231bc28338b7e266",
+                      "parents": [
+                        "b18bb9eb14b15a7e36e507e19273a4bd64048222"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-16T22:30:47.000Z",
+                      "subject": "assignment7: Add analyticsRoutes.js"
+                    },
+                    {
+                      "sha": "b18bb9eb14b15a7e36e507e19273a4bd64048222",
+                      "parents": [
+                        "f620eac71b2be7160fbd85f8e974123f693447c8"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-16T22:17:36.000Z",
+                      "subject": "assignment7: Refactor app.js, implement database transactions with user registration and bulk operations"
+                    },
+                    {
+                      "sha": "f620eac71b2be7160fbd85f8e974123f693447c8",
+                      "parents": [
+                        "b7f69ad5d124b30f58c09fbee283f18b41616eb6"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-16T21:45:19.000Z",
+                      "subject": "assignment7:Implement database transactions with user registration"
+                    },
+                    {
+                      "sha": "b7f69ad5d124b30f58c09fbee283f18b41616eb6",
+                      "parents": [
+                        "58b496f94ed649e30b48d16fe9ebc09639bad163"
+                      ],
+                      "login": "BytesOfStrength",
+                      "author": "BytesOfStrength",
+                      "date": "2026-05-16T21:15:02.000Z",
+                      "subject": "assignment7: Implement Pagination to taskController.js and analyticsController.js, refactor taskController.js to add search task filter, imp"
+                    }
+                  ],
+                  "partial": true,
+                  "diagnostic": ""
+                },
+                "jayanti-neu/tikkun-haklali": {
+                  "repository": "jayanti-neu/tikkun-haklali",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "0b7aa7cd167b2d3d53596406b1ef8c853e61f2d2",
+                      "parents": [
+                        "dd7cdb120f5580cc4b1f4a1853f02616d6936b84"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-20T05:23:31.000Z",
+                      "subject": "content added"
+                    },
+                    {
+                      "sha": "dd7cdb120f5580cc4b1f4a1853f02616d6936b84",
+                      "parents": [],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-03-20T05:21:36.000Z",
+                      "subject": "Initial commit"
+                    }
+                  ],
+                  "partial": false,
+                  "diagnostic": ""
+                },
+                "matheusbizservices/codethedream-react-exercises": {
+                  "repository": "matheusbizservices/codethedream-react-exercises",
+                  "branch": "main",
+                  "commits": [
+                    {
+                      "sha": "918d0b1c85880f170b66d2353256cd9753d18135",
+                      "parents": [
+                        "0f7be82365efb5459dc7859cfe0eab210188e948",
+                        "1f454563e40be7e1707cb29e0ee504833779deaa"
+                      ],
+                      "login": "matheusbizservices",
+                      "author": "matheusbizservices",
+                      "date": "2026-06-14T15:29:52.000Z",
+                      "subject": "Merge pull request #2 from matheusbizservices/lesson-01-setup"
+                    },
+                    {
+                      "sha": "1f454563e40be7e1707cb29e0ee504833779deaa",
+                      "parents": [
+                        "0f7be82365efb5459dc7859cfe0eab210188e948"
+                      ],
+                      "login": "MatAra07",
+                      "author": "MatAra07",
+                      "date": "2026-06-14T14:09:41.000Z",
+                      "subject": "Lesson 1: Build initial Todo List with map"
+                    },
+                    {
+                      "sha": "0f7be82365efb5459dc7859cfe0eab210188e948",
+                      "parents": [
+                        "9703a3ff46c63dadbf8abca426af65904b9eef6e",
+                        "ea3195f0b60efb83a17a97d9df0bcebeacf2564b"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-03-11T14:37:16.000Z",
+                      "subject": "Merge pull request #57 from Code-the-Dream-School/copilot/change-week-to-lesson"
+                    },
+                    {
+                      "sha": "ea3195f0b60efb83a17a97d9df0bcebeacf2564b",
+                      "parents": [
+                        "64f69660889a5e53bff24fe81df2fec1ec70f481"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-11T14:15:54.000Z",
+                      "subject": "fix: remove welcome messages and singularize 'exercises' across instructions"
+                    },
+                    {
+                      "sha": "64f69660889a5e53bff24fe81df2fec1ec70f481",
+                      "parents": [
+                        "b1857b947338bc095bb9db182259ad128bb0c703"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-11T13:41:23.000Z",
+                      "subject": "fix: address review feedback on instructions and README wording"
+                    },
+                    {
+                      "sha": "b1857b947338bc095bb9db182259ad128bb0c703",
+                      "parents": [
+                        "4fe0faa192091e31f53518301cd6f40692cffc60"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-11T13:19:23.000Z",
+                      "subject": "fix: update wording in instructions.md and instructions-template.md per review feedback"
+                    },
+                    {
+                      "sha": "4fe0faa192091e31f53518301cd6f40692cffc60",
+                      "parents": [
+                        "c7c3c5501b680b234160a5e95969cff0710b3429"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-10T15:00:01.000Z",
+                      "subject": "feat: rename week to lesson throughout codebase"
+                    },
+                    {
+                      "sha": "c7c3c5501b680b234160a5e95969cff0710b3429",
+                      "parents": [
+                        "9703a3ff46c63dadbf8abca426af65904b9eef6e"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-10T14:40:24.000Z",
+                      "subject": "Initial plan"
+                    },
+                    {
+                      "sha": "9703a3ff46c63dadbf8abca426af65904b9eef6e",
+                      "parents": [
+                        "7f848d86d448242ce433a2325a69d429549c28e2",
+                        "fae5bef07b53cb1e82162d43ccc661b09b72c830"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-03-02T14:45:35.000Z",
+                      "subject": "Merge pull request #55 from Code-the-Dream-School/copilot/add-contributing-and-code-of-conduct"
+                    },
+                    {
+                      "sha": "fae5bef07b53cb1e82162d43ccc661b09b72c830",
+                      "parents": [
+                        "122f91a9405122b36a2d8196d5dcd0cd8a3db08d"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-02T14:43:11.000Z",
+                      "subject": "Clarify lint step: fix non-intentional errors, safely ignore intentional ones"
+                    },
+                    {
+                      "sha": "122f91a9405122b36a2d8196d5dcd0cd8a3db08d",
+                      "parents": [
+                        "0f6d1bd97c37da88b644f23d6a56e4056d938c6e"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-02T14:37:58.000Z",
+                      "subject": "Revise lint guidance: intentional errors can be safely ignored, no eslint-disable needed"
+                    },
+                    {
+                      "sha": "0f6d1bd97c37da88b644f23d6a56e4056d938c6e",
+                      "parents": [
+                        "ae1c0191350cc4684237bf56e01f4b062813b56e"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-02T14:34:56.000Z",
+                      "subject": "Address review feedback on CONTRIBUTING.md; add instructions-template.md"
+                    },
+                    {
+                      "sha": "ae1c0191350cc4684237bf56e01f4b062813b56e",
+                      "parents": [
+                        "caf37e2387487fddf827666b024a35b24be1b00f"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-02T14:16:44.000Z",
+                      "subject": "Add .github/CONTRIBUTING.md and .github/CODE_OF_CONDUCT.md"
+                    },
+                    {
+                      "sha": "caf37e2387487fddf827666b024a35b24be1b00f",
+                      "parents": [
+                        "7f848d86d448242ce433a2325a69d429549c28e2"
+                      ],
+                      "login": "Copilot",
+                      "author": "Copilot",
+                      "date": "2026-03-02T14:13:57.000Z",
+                      "subject": "Initial plan"
+                    },
+                    {
+                      "sha": "7f848d86d448242ce433a2325a69d429549c28e2",
+                      "parents": [
+                        "d83814122fc4ec7de973f38f41d785b3517cff40",
+                        "39d7cc04ec844c32100e9103323842c22d3c5883"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-01-23T15:40:43.000Z",
+                      "subject": "Merge pull request #53 from Code-the-Dream-School/12-week-10-exercises"
+                    },
+                    {
+                      "sha": "39d7cc04ec844c32100e9103323842c22d3c5883",
+                      "parents": [
+                        "b8b761bba0beca1e3d196f5cffb0afa8a8ccf27f"
+                      ],
+                      "login": "egomadking",
+                      "author": "egomadking",
+                      "date": "2026-01-23T15:39:46.000Z",
+                      "subject": "add task step to import products"
+                    },
+                    {
+                      "sha": "b8b761bba0beca1e3d196f5cffb0afa8a8ccf27f",
+                      "parents": [
+                        "e7189692b3221fd37bd84e8aa88e00a32e372b53"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-01-22T18:06:19.000Z",
+                      "subject": "updates the assessment criteria"
+                    },
+                    {
+                      "sha": "e7189692b3221fd37bd84e8aa88e00a32e372b53",
+                      "parents": [
+                        "ef3a1179bf13558636c2a5e6f4890711f00fbf5d"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-01-22T17:54:17.000Z",
+                      "subject": "update to reflect suggestions"
+                    },
+                    {
+                      "sha": "d83814122fc4ec7de973f38f41d785b3517cff40",
+                      "parents": [
+                        "1c92ffe208b271ea2541cd4f50603e73d66fa423",
+                        "27510f7e12f17cb75d8a5d02999081d1dca3e198"
+                      ],
+                      "login": "royemosby",
+                      "author": "royemosby",
+                      "date": "2026-01-22T14:31:40.000Z",
+                      "subject": "Merge pull request #50 from Code-the-Dream-School/7-week-05-exercises"
+                    },
+                    {
+                      "sha": "27510f7e12f17cb75d8a5d02999081d1dca3e198",
+                      "parents": [
+                        "e728118728c67c3de19cbd87a844511f396b363a"
+                      ],
+                      "login": "egomadking",
+                      "author": "egomadking",
+                      "date": "2026-01-22T14:31:24.000Z",
+                      "subject": "re-number steps, have students remove required attr"
+                    },
+                    {
+                      "sha": "ef3a1179bf13558636c2a5e6f4890711f00fbf5d",
+                      "parents": [
+                        "11bf51db745f83604952c7165f8287c8e1588ba8"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-01-20T17:09:52.000Z",
+                      "subject": "fixes suggestions given by copilot"
+                    },
+                    {
+                      "sha": "11bf51db745f83604952c7165f8287c8e1588ba8",
+                      "parents": [
+                        "371cff40911b2f0e3cab4f36c056127413e428cf"
+                      ],
+                      "login": "jayanti-neu",
+                      "author": "jayanti-neu",
+                      "date": "2026-01-20T03:29:23.000Z",
+                      "subject": "adds week 10 exercises"
+                    },
+                    {
+                      "sha": "e728118728c67c3de19cbd87a844511f396b363a",
+                      "parents": [
+                        "3ae8c6f87e77de60b7d32685aac882b3f488933e"
+                      ],
+                      "login": "egomadking",
+                      "author": "egomadking",
+                      "date": "2026-01-19T20:57:09.000Z",
+                      "subject": "convert styles to kebab-case"
+                    },
+                    {
+                      "sha": "3ae8c6f87e77de60b7d32685aac882b3f488933e",
+                      "parents": [
+                        "ba80c782170b3eccab559425d79b353f7856e8bf"
+                      ],
+                      "login": "egomadking",
+                      "author": "egomadking",
+                      "date": "2026-01-19T20:56:55.000Z",
+                      "subject": "removed unused"
+                    }
+                  ],
+                  "partial": true,
+                  "diagnostic": ""
+                }
+              },
+              "version": 7
             }
